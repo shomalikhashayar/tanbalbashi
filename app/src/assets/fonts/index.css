@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "yekan-thin";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-ultralight";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-UltraLight.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-light";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-regular";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-medium";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-demibold";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-DemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-bold";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-extraBold";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-ExtraBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "yekan-black";
+  src: url("/app/src/assets/fonts/IRANYekanXFaNum-Black.woff") format("woff");
+  font-display: swap;
+}/*# sourceMappingURL=index.css.map */
