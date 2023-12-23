@@ -5,7 +5,7 @@
         <q-toolbar class="row justify-between items-center no-padding">
           <div class="flex link-on-hover">
             <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
-              <q-avatar class="q-mr-md" size="72px">
+              <q-avatar class="q-mr-sm" size="72px">
                 <img src="../../src/assets/icons/sloth.png">
               </q-avatar>
               <span class="text-weight-900 text-dark">تنبل‌باشی</span>
