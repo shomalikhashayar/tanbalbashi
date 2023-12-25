@@ -10,9 +10,7 @@
           <span class="text-weight-900 text-dark">تنبل‌باشی</span>
         </a>
 
-        <q-btn unelevated>
-          برام یه قهوه بخر
-        </q-btn>
+        <buy-coffee-btn />
 
       </div>
 
@@ -25,14 +23,15 @@
       </div>
 
       <div class="q-mt-lg">
-        <lookup-view />
+        <search-box />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import LookupView from "src/components/shared/LookupView.vue"
+import SearchBox from "src/components/shared/SearchBox.vue"
+import BuyCoffeeBtn from "src/components/shared/BuyCoffeeBtn.vue"
 </script>
 
 <style lang="scss" scoped>
