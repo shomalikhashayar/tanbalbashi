@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh Lpr lff">
     <q-header unelevated bordered class="bg-white text-dark q-py-sm">
       <div class="container">
         <q-toolbar class="row justify-between items-center no-padding">
@@ -12,9 +12,8 @@
             </a>
           </div>
           <div class="col">
-          <search-box/>
+            <search-box />
           </div>
-
           <div class="col-2 row justify-end">
             <buy-coffee-btn />
           </div>
@@ -22,9 +21,11 @@
       </div>
     </q-header>
 
+    <main-footer />
+
     <q-page-container>
 
-      <div class="container q-py-lg">
+      <div class="container q-pt-xl">
         <bread-crumbs />
       </div>
 
@@ -34,7 +35,7 @@
 </template>
 
 <script setup>
-
+import MainFooter from "src/components/footer/desktop/IndexView.vue"
 import BreadCrumbs from "src/components/shared/BreadCrumbs.vue"
 import SearchBox from "src/components/shared/SearchBox.vue"
 import BuyCoffeeBtn from "src/components/shared/BuyCoffeeBtn.vue"

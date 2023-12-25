@@ -1,29 +1,55 @@
 <template>
-  <q-card bordered class="no-shadow">
-    <q-card-section class="q-pa-lg">
-      <div class="text-h6">فاکتوریل</div>
-      <div class="text-body1">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-        روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-        ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-        طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
-        ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و
-        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
-        گیرد.
-      </div>
-    </q-card-section>
-  </q-card>
+  <div class="container">
+    <q-card bordered class="no-shadow q-pa-xl q-my-xl">
+      <q-card-section>
+        <h1 class="text-h6 no-letter-spacing">
+          محاسبه فاکتوریل
+        </h1>
+        <div class="row">
+          <q-input class="text-body1" dense outlined v-model="inputValue" style="width: 400px;" />
+          <q-btn class="text-body1 q-ml-sm" unelevated color="primary" @click="calculateFactorial">محاسبه</q-btn>
+        </div>
+
+        <div class="row q-my-lg">
+          <q-item-label class="q-mb-sm text-grey-7 text-h6 no-letter-spacing">
+            نتیجه:
+          </q-item-label>
+          <q-input readonly autogrow class="text-body1 full-width" outlined v-model="formattedResult" />
+        </div>
+      </q-card-section>
+    </q-card>
+  </div>
 </template>
 
 <script setup>
+import { ref, computed } from 'vue';
+
+const inputValue = ref('');
+const result = ref('');
+
+const calculateFactorial = () => {
+  const input = parseInt(inputValue.value);
+
+  if (!isNaN(input) && input >= 0) {
+    const factorialResult = calculateBigIntFactorial(input);
+    result.value = factorialResult;
+  }
+};
+
+const calculateBigIntFactorial = (number) => {
+  if (number <= 1) {
+    return 1n;
+  } else {
+    return BigInt(number) * calculateBigIntFactorial(number - 1);
+  }
+};
+
+const formattedResult = computed(() => {
+  return result.value ? result.value.toLocaleString() : '';
+});
 
 </script>
 
-<style lang="scss" scoped>
-
-.card-width {
-  width: 900px;
-}
-
-
+<style lang="css">
+/* Your existing CSS styles here */
 </style>

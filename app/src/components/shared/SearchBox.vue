@@ -1,8 +1,7 @@
 <template>
   <div class="full-width">
-    <q-input id="search" ref="search" v-model="searchQuery" @update:model-value="handleSearchInput"
-      @keydown.enter="showMenuOnEnter" placeholder="جستجو برای ابزارها" rounded outlined bg-color="white"
-      color="secondary" class="text-h6">
+    <q-input ref="searchInput" v-model="searchQuery" @keyup.enter.prevent="showMenuOnEnter"
+      placeholder="جستجو برای ابزارها" rounded outlined bg-color="white" color="secondary" class="text-h6">
       <template v-slot:prepend>
         <q-icon v-if="searchQuery === ''" name="search" size="md" />
         <q-icon size="md" v-else name="clear" class="cursor-pointer" @click="clearSearch" />
@@ -14,7 +13,7 @@
       </template>
     </q-input>
     <q-menu :offset="[0, 20]" no-parent-event v-model="isPopupOpen" transition-show="jump-down" transition-hide="jump-up"
-      fit no-focus no-refocus>
+      fit>
       <q-list v-if="isPopupOpen">
         <q-item :to="item.link" v-for="(item, index) in filteredItems" :key="index">
           <q-item-section class="text-body1 no-letter-spacing">{{ item.name }}</q-item-section>
@@ -33,12 +32,11 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { helper } from 'src/helpers/helpers.js';
-import nothingFound from 'src/components/shared/NothingFound.vue'
+import NothingFound from 'src/components/shared/NothingFound.vue';
 
-const tools = helper.getTools()
+const tools = helper.getTools();
 
-const search = ref(null)
-
+const searchInput = ref(null);
 const searchQuery = ref('');
 const isPopupOpen = ref(false);
 
@@ -57,22 +55,28 @@ function showMenuOnEnter(event) {
 function clearSearch() {
   searchQuery.value = '';
   isPopupOpen.value = false;
+  focusOnSearch();
 }
 
 function focusOnSearch() {
-  search.value.select()
+  if (searchInput.value) {
+    searchInput.value.focus();
+  }
 }
 
-onMounted(() => {
-
+function setupEventListeners() {
   document.addEventListener('keydown', function (event) {
     if (event.ctrlKey && event.key === 'k') {
-      event.preventDefault()
-      focusOnSearch()
+      event.preventDefault();
+      if (searchInput.value) {
+        searchInput.value.focus();
+      }
     }
   });
+}
 
-  focusOnSearch()
 
-})
+onMounted(() => {
+  setupEventListeners();
+});
 </script>
