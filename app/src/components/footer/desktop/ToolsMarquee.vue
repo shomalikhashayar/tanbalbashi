@@ -21,34 +21,8 @@
 </template>
 
 <script setup>
-
-const tools = [
-  {
-    name: "محاسبه فاکتوریل",
-    link: "/tools/factorial"
-  },
-  {
-    name: "محاسبه لگاریتم",
-    link: "/tools/factorial"
-  },
-  {
-    name: "محاسبه جذر",
-    link: "/tools/factorial"
-  },
-  {
-    name: "تولید متن تصادفی",
-    link: "/tools/factorial"
-  },
-  {
-    name: "تولید رمز قوی",
-    link: "/tools/factorial"
-  },
-  {
-    name: "محاسبه درصد",
-    link: "/tools/factorial"
-  }
-]
-
+import { helper } from 'src/helpers/helpers.js';
+const tools = helper.getTools()
 </script>
 
 <style lang="scss" scoped>
