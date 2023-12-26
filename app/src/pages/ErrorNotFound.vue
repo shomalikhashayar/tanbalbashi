@@ -1,6 +1,5 @@
 <template>
-  <q-page class="bg-accent">
-    <div class="bg-accent text-dark row justify-center items-center q-pt-xl" style="height: 500px">
+    <div style="height: calc(100vh);" class="bg-accent text-dark row justify-center items-center">
       <div class="row items-center" style="width:350px">
         <div class="sea">
           <div class="circle-wrapper">
@@ -32,17 +31,11 @@
         </q-btn>
       </div>
     </div>
-  </q-page>
 </template>
-
-<script setup>
-
-</script>
 
 <style scoped lang="scss">
 $color1: #306D85;
 $color2: #D93A54;
-
 
 .sea {
   overflow: hidden;

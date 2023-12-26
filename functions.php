@@ -5,7 +5,7 @@ function enqueue_quasar_styles()
 {
     wp_register_style(
         "vendor",
-        get_template_directory_uri() . "/app/dist/spa/css/vendor.1440b53e.css",
+        get_template_directory_uri() . "/app/dist/spa/css/vendor.25263f44.css",
         [],
         false,
         "all"
@@ -15,7 +15,7 @@ function enqueue_quasar_styles()
 
     wp_register_style(
         "app",
-        get_template_directory_uri() . "/app/dist/spa/css/app.4ae39ddd.css",
+        get_template_directory_uri() . "/app/dist/spa/css/app.a8ba4368.css",
         [],
         false,
         "all"
@@ -42,31 +42,7 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'vendor',
-        get_template_directory_uri() . '/app/dist/spa/js/vendor.bd810328.js',
-        [],
-        null,
-        true
-    );
-
-    wp_enqueue_script(
-        'chunk1',
-        get_template_directory_uri() . '/app/dist/spa/js/123.9af94226.js',
-        [],
-        null,
-        true
-    );
-
-    wp_enqueue_script(
-        'chunk2',
-        get_template_directory_uri() . '/app/dist/spa/js/134.0420a6fa.js',
-        [],
-        null,
-        true
-    );
-
-    wp_enqueue_script(
-        'chunk3',
-        get_template_directory_uri() . '/app/dist/spa/js/460.04b7a7b2.js',
+        get_template_directory_uri() . '/app/dist/spa/js/vendor.b916aa34.js',
         [],
         null,
         true
@@ -74,7 +50,7 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'app',
-        get_template_directory_uri() . '/app/dist/spa/js/app.8d8b1d92.js',
+        get_template_directory_uri() . '/app/dist/spa/js/app.ac4241b0.js',
         [],
         null,
         true

@@ -49,7 +49,3 @@ const formattedResult = computed(() => {
 });
 
 </script>
-
-<style lang="css">
-/* Your existing CSS styles here */
-</style>

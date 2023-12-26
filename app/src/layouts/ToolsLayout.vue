@@ -6,7 +6,7 @@
           <div class="col-3 flex link-on-hover">
             <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
               <q-avatar class="q-mr-sm" size="72px">
-                <img src="../../src/assets/icons/sloth.png">
+                <img src="../../public/sloth.png">
               </q-avatar>
               <span class="text-weight-900 text-dark">تنبل‌باشی</span>
             </a>

@@ -1,33 +1,35 @@
+import MainLayout from "src/layouts/MainLayout.vue";
+import ToolsLayout from "src/layouts/ToolsLayout.vue";
+import HomePage from "src/pages/HomePage.vue";
+import FactorialPage from "src/pages/FactorialPage.vue";
+import ErrorNotFound from "src/pages/ErrorNotFound.vue";
+
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/HomePage.vue") }],
+    name: "خانه",
+    meta: { icon: "o_chair" },
+    component: MainLayout,
+    children: [{ path: "", component: HomePage }],
   },
-
   {
     path: "/tools",
-    component: () => import("layouts/ToolsLayout.vue"),
     name: "ابزارها",
-    meta: {
-      icon: "o_handyman",
-    },
+    meta: { icon: "o_square_foot" },
+    component: ToolsLayout,
     children: [
       {
         path: "factorial",
-        component: () => import("pages/FactorialPage.vue"),
         name: "فاکتوریل",
-        meta: {
-          icon: "o_priority_high",
-        },
+        meta: { icon: "o_priority_high" },
+        component: FactorialPage,
       },
     ],
   },
-
   {
     path: "/:catchAll(.*)*",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/ErrorNotFound.vue") }],
+    component: MainLayout,
+    children: [{ path: "", component: ErrorNotFound }],
   },
 ];
 
