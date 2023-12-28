@@ -3,7 +3,23 @@
 @import "../assets/typography/index.scss";
 
 .container {
-  width: 1170px;
+  width: 1100px;
+  padding-left: 40px;
+  padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
+}
+
+// .header-container {
+//   width: 1250px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.layout {
+  background-color: $layout;
+}
+
+.q-card--bordered {
+  box-shadow: 0 0 8px 2px #00000008 !important;
 }

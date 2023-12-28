@@ -1,7 +1,6 @@
 <template>
-  <div class="container">
-    <q-card bordered class="no-shadow q-pa-xl q-my-xl">
-      <q-card-section>
+    <q-card bordered class="no-shadow q-my-xl">
+      <q-card-section class="q-pa-xl">
         <h1 class="text-h6 no-letter-spacing">
           محاسبه فاکتوریل
         </h1>
@@ -18,7 +17,6 @@
         </div>
       </q-card-section>
     </q-card>
-  </div>
 </template>
 
 <script setup>

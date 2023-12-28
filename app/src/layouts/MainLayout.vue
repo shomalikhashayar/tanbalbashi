@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import MainFooter from "src/components/footer/desktop/IndexView.vue";
+import MainFooter from "src/components/footer/main/desktop/IndexView.vue";
 </script>
 
 

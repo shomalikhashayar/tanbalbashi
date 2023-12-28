@@ -1,5 +1,5 @@
 <template>
-  <q-page class="container">
+  <q-page class="q-pb-lg container">
     <factorial />
     <factorial-description />
   </q-page>

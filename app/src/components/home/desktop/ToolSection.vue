@@ -77,7 +77,7 @@ const autoplay = ref(true)
 <style lang="scss" scoped>
 .card-width {
 
-  width: 350px;
+  width: 300px;
 
 }
 
