@@ -13,7 +13,7 @@
       </template>
     </q-input>
     <q-menu :offset="[0, 20]" no-parent-event v-model="isPopupOpen" transition-show="jump-down" transition-hide="jump-up"
-      fit>
+      fit no-focus no-refocus>
       <q-list v-if="isPopupOpen">
         <q-item :to="item.link" v-for="(item, index) in filteredItems" :key="index">
           <q-item-section class="text-body1 no-letter-spacing">{{ item.name }}</q-item-section>
