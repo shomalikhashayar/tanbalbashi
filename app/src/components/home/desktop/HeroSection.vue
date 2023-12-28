@@ -5,7 +5,7 @@
 
         <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
           <q-avatar class="q-mr-sm" size="72px">
-            <img src="../../../../public/sloth.png">
+            <img :src="`${websiteURL}/sloth.png`" alt="Tanbalbashi logo">
           </q-avatar>
           <span class="text-weight-900 text-dark">تنبل‌باشی</span>
         </a>
@@ -30,9 +30,14 @@
 </template>
 
 <script setup>
-import SearchBox from "src/components/shared/SearchBox.vue"
-import BuyCoffeeBtn from "src/components/shared/BuyCoffeeBtn.vue"
+import SearchBox from "src/components/shared/SearchBox.vue";
+import BuyCoffeeBtn from "src/components/shared/BuyCoffeeBtn.vue";
+import { helper } from "src/helpers/helpers";
+
+const websiteURL = helper.websiteURL()
+
 </script>
+
 
 <style lang="scss" scoped>
 .hero {

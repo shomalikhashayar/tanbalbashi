@@ -33,6 +33,19 @@
     </div>
 </template>
 
+<script setup>
+
+import { useMeta } from "quasar"
+
+const metaData = {
+  title: 'تنبل‌باشی',
+  titleTemplate: title => `${title} | برگه یافت نشد `,
+};
+
+useMeta(metaData);
+
+</script>
+
 <style scoped lang="scss">
 $color1: #306D85;
 $color2: #D93A54;

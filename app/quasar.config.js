@@ -55,7 +55,7 @@ module.exports = configure(function (ctx) {
       rtl: true,
 
       // transpile: false,
-      publicPath: '/',
+      publicPath: '',
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
@@ -74,10 +74,11 @@ module.exports = configure(function (ctx) {
       // https://v2.quasar.dev/quasar-cli-webpack/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
 
+
       chainWebpack (chain) {
         chain.plugin('eslint-webpack-plugin')
           .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
-      }
+      },
 
     },
 
@@ -117,7 +118,7 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Meta']
     },
 
     // animations: 'all', // --- includes all animations

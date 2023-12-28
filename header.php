@@ -4,18 +4,6 @@
 <head>
   <?php wp_head(); ?>
   <meta charset="UTF-8">
-
-  <title>
-    <?php
-    if (is_front_page()) {
-      echo 'فاکتوریل | خودت رو اذیت نکن';
-    } else {
-      wp_title('|', true, 'right');
-      echo bloginfo('name');
-    }
-    ?>
-  </title>
-
   <meta name="description" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />

@@ -10,4 +10,18 @@
 import HeroSection from "src/components/home/desktop/HeroSection.vue"
 import ToolSection from "src/components/home/desktop/ToolSection.vue"
 import DonateSection from "src/components/home/desktop/DonateSection.vue"
+
+import { useMeta } from "quasar"
+
+const metaData = {
+  title: 'تنبل‌باشی',
+  titleTemplate: title => `${title} | بهترین جعبه‌ ابزار آنلاین همه کاره`,
+  meta: {
+    description: { name: 'description', content: 'تنبل‌باشی بهترین جعبه‌ ابزار آنلاین همه کاره' },
+    keywords: { name: 'keywords', content: 'جعبه ابزار آنلاین' },
+    equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+  },
+};
+
+useMeta(metaData);
 </script>

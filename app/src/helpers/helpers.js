@@ -36,4 +36,9 @@ export const helper = {
       link: "/tools/factorial",
     },
   ],
+
+  websiteURL: () => {
+    return "https://tanbalbashi.ir/wp-content/themes/tanbalbashi/app/public";
+    return "http://localhost/webida/wp-content/themes/blackbox/app/public";
+  }
 };

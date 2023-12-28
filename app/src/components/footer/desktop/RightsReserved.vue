@@ -3,7 +3,7 @@
     <div class="row items-center">
       <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
         <q-avatar class="q-mr-sm" size="56px">
-          <img src="../../../../public/sloth.png">
+          <img :src="`${websiteURL}/sloth.png`" alt="Tanbalbashi logo">
         </q-avatar>
         <span class="text-weight-900 text-dark">تنبل‌باشی</span>
       </a>
@@ -21,5 +21,7 @@
 import { ref } from "vue"
 import { helper } from 'src/helpers/helpers.js';
 
+const websiteURL = helper.websiteURL()
 const persianYear = helper.getPersianYear();
+
 </script>
