@@ -32,7 +32,7 @@
         </q-card>
       </a>
 
-      <a href="/tools/factorial" class="no-decoration text-dark">
+      <a href="/tools/loremipsum" class="no-decoration text-dark">
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
@@ -68,9 +68,6 @@
 
 <script setup>
 import { ref } from 'vue'
-
-const slide = ref(1)
-const autoplay = ref(true)
 
 </script>
 

@@ -2,6 +2,7 @@ import MainLayout from "src/layouts/MainLayout.vue";
 import ToolsLayout from "src/layouts/ToolsLayout.vue";
 import HomePage from "src/pages/HomePage.vue";
 import FactorialPage from "src/pages/FactorialPage.vue";
+import LoremIpsumPage from "src/pages/LoremIpsumPage.vue";
 import ErrorNotFound from "src/pages/ErrorNotFound.vue";
 
 const routes = [
@@ -23,6 +24,12 @@ const routes = [
         name: "فاکتوریل",
         meta: { icon: "o_priority_high" },
         component: FactorialPage,
+      },
+      {
+        path: "loremipsum",
+        name: "متن تصادفی",
+        meta: { icon: "o_format_list_numbered_rtl" },
+        component: LoremIpsumPage,
       },
     ],
   },

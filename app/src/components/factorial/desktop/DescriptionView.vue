@@ -1,8 +1,8 @@
 <template>
   <q-card bordered class="no-shadow">
     <q-card-section class="q-pa-xl">
-      <div class="column justify-start q-mb-xl">
-        <h2 class="text-h6 text-weight-900">برای مطالعه (حال داشتی بخون)</h2>
+      <div class="column justify-start">
+        <h2 class="text-h6 text-weight-900 q-mt-none">برای مطالعه (حال داشتی بخون)</h2>
         <p class="text-body1 no-margin no-letter-spacing">
           فاکتوریل یک عدد، حاصل ضرب تمام اعداد صحیح نزولی مثبت از آن عدد تا عدد یک است. فاکتوریل <span
             class="text-h6 text-bold">n </span>با <span class="text-h6 text-bold">n!</span> نشان داده می شود.

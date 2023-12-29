@@ -1,19 +1,19 @@
 <template>
   <q-page class="q-pb-lg container">
-    <factorial />
+    <lorem-ipsum />
     <description />
   </q-page>
 </template>
 
 <script setup>
-import Factorial from 'src/components/factorial/desktop/IndexView.vue';
-import Description from 'src/components/factorial/desktop/DescriptionView.vue';
+import LoremIpsum from 'src/components/loremipsum/desktop/IndexView.vue';
+import Description from 'src/components/loremipsum/desktop/DescriptionView.vue';
 
 import { useMeta } from "quasar"
 
 const metaData = {
   title: 'تنبل‌باشی',
-  titleTemplate: title => `${title} | محاسبه فاکتوریل `,
+  titleTemplate: title => `${title} | تولید متن تصادفی `,
   meta: {
     description: { name: 'description', content: 'تنبل‌باشی بهترین جعبه‌ ابزار آنلاین همه کاره`' },
     keywords: { name: 'keywords', content: 'محاسبه آنلاین فاکتوریل' },

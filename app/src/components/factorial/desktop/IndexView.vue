@@ -1,7 +1,7 @@
 <template>
     <q-card bordered class="no-shadow q-my-xl">
       <q-card-section class="q-pa-xl">
-        <h1 class="text-h6 no-letter-spacing">
+        <h1 class="text-h6 no-letter-spacing q-mt-none">
           محاسبه فاکتوریل
         </h1>
         <div class="row">

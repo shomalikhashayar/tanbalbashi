@@ -10,16 +10,72 @@
   margin-right: auto;
 }
 
-// .header-container {
-//   width: 1250px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .layout {
   background-color: $layout;
 }
 
 .q-card--bordered {
   box-shadow: 0 0 8px 2px #00000008 !important;
+}
+
+textarea.q-field__native  {
+  min-height: 250px !important;
+  line-height: 28px !important;
+}
+
+.menu-bar .q-item.q-router-link--active {
+  background-color: #{$primary}20;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: 4px solid $primary;
+  color: $primary;
+  margin-right: 24px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+
+  .q-icon {
+    color: $primary;
+  }
+
+  & .q-focus-helper {
+    display: none !important;
+  }
+
+}
+
+.menu-bar .q-focus-helper {
+  background-color: $primary;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: $primary;
+  margin-right: 24px;
+}
+
+.q-focus-helper {
+  background-color: $primary !important;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 14px;
+  background: #00000010;
+  z-index: 12;
+  overflow: visible;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: var(--q-primary);
+  border-radius: 10px;
+  z-index: 12;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  transition: background-color .32s ease-in-out;
+  margin: 8px;
+  min-height: 32px;
+  min-width: 32px;
+
+  &:hover {
+    background: var(--q-primary);
+  }
 }

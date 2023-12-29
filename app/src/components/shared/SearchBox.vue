@@ -7,7 +7,7 @@
         <q-icon size="md" v-else name="clear" class="cursor-pointer" @click="clearSearch" />
       </template>
       <template #append>
-        <q-chip class="text-caption text-bold text-dark no-pointer-events">
+        <q-chip class="text-caption text-white bg-primary text-bold text-dark no-pointer-events">
           CTRL + K
         </q-chip>
       </template>

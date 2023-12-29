@@ -1,12 +1,12 @@
 <template>
-  <q-drawer v-model="drawer" bordered show-if-above :width="280" :breakpoint="500" unelevated class="bg-white">
+  <q-drawer v-model="drawer" bordered show-if-above :width="280" :breakpoint="500" unelevated class="menu-bar bg-white">
     <q-scroll-area class="fit">
-      <q-list class="rounded-borders text-primary">
-        <div class="bg-blue-grey-1 text-bold text-body1 no-letter-spacing q-py-md q-px-lg">
+      <q-list class="rounded-borders text-dark">
+        <div class="text-bold text-h6 no-letter-spacing q-py-md q-px-lg">
           ابزارها
         </div>
         <div v-for="tool in tools" :key="tool.name">
-          <q-item clickable v-ripple class="q-py-md q-pl-lg">
+          <q-item clickable v-ripple :to="`/tools/${tool.address}`" class="q-py-md q-pl-lg">
             <q-item-section avatar>
               <q-icon :name="tool.icon" />
             </q-item-section>

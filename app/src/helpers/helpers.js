@@ -14,32 +14,38 @@ export const helper = {
     {
       name: "محاسبه فاکتوریل",
       link: "/tools/factorial",
-      icon: "o_priority_high"
+      icon: "o_priority_high",
+      address: "factorial"
     },
     {
       name: "محاسبه لگاریتم",
       link: "/tools/factorial",
-      icon: "o_functions"
+      icon: "o_functions",
+      address: "logarightm"
     },
     {
       name: "محاسبه جذر",
       link: "/tools/factorial",
-      icon: "o_view_in_ar"
+      icon: "o_view_in_ar",
+      address: "square"
     },
     {
       name: "تولید متن تصادفی",
       link: "/tools/factorial",
-      icon: "o_format_list_numbered_rtl"
+      icon: "o_format_list_numbered_rtl",
+      address: "loremipsum"
     },
     {
       name: "تولید رمز قوی",
       link: "/tools/factorial",
-      icon: "o_password"
+      icon: "o_password",
+      address: "strong-password"
     },
     {
       name: "محاسبه درصد",
       link: "/tools/factorial",
-      icon: "o_percent"
+      icon: "o_percent",
+      address: "percent"
     },
   ],
 
