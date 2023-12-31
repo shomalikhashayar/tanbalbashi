@@ -6,7 +6,7 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">محاسبه فاکتوریل</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">محاسبه فاکتوریل</h3>
 
           </q-card-section>
         </q-card>
@@ -16,7 +16,7 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">محاسبه لگاریتم</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">محاسبه لگاریتم</h3>
 
           </q-card-section>
         </q-card>
@@ -26,7 +26,7 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">محاسبه جذر</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">محاسبه جذر</h3>
 
           </q-card-section>
         </q-card>
@@ -36,7 +36,17 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">تولید متن تصادفی</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">تولید متن تصادفی</h3>
+
+          </q-card-section>
+        </q-card>
+      </a>
+
+      <a href="/tools/loremipsum" class="no-decoration text-dark">
+        <q-card to="/tools/factorial" bordered class="no-shadow card-width">
+          <q-card-section class="q-py-md row items-center justify-center">
+
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">شمارش کلمات در متن</h3>
 
           </q-card-section>
         </q-card>
@@ -46,7 +56,7 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">تولید رمز قوی</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">تولید رمز قوی</h3>
 
           </q-card-section>
         </q-card>
@@ -56,7 +66,7 @@
         <q-card to="/tools/factorial" bordered class="no-shadow card-width">
           <q-card-section class="q-py-md row items-center justify-center">
 
-            <h3 class="text-weight-500 text-h6 no-letter-spacing">محاسبه درصد</h3>
+            <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">محاسبه درصد</h3>
 
           </q-card-section>
         </q-card>

@@ -1,17 +1,19 @@
 <template>
   <div class="flex items-center no-wrap">
-    <h3 class="text-h4 text-weight-900 text-dark q-mr-md">ابزارها</h3>
+    <a href="/tools" class="no-decoration">
+    <h3 class="text-h4 text-weight-900 text-dark q-mr-md decoration-on-hover">ابزارها</h3>
+    </a>
     <div class="marquee">
       <div class="marquee--inner">
         <span>
           <div class="row q-gutter-x-lg no-wrap">
-            <a class="text-dark text-body1 no-decoration no-letter-spacing" :href="tool.link" v-for="tool in tools"
+            <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
               :key="tool.name">{{ tool.name }}&nbsp;</a>
           </div>
         </span>
         <span>
           <div class="row q-gutter-x-lg no-wrap">
-            <a class="text-dark text-body1 no-decoration no-letter-spacing" :href="tool.link" v-for="tool in tools"
+            <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
               :key="tool.name">{{ tool.name }}&nbsp;</a>
           </div>
         </span>

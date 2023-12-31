@@ -31,9 +31,15 @@ export const helper = {
     },
     {
       name: "تولید متن تصادفی",
-      link: "/tools/factorial",
+      link: "/tools/loremipsum",
       icon: "o_format_list_numbered_rtl",
       address: "loremipsum"
+    },
+    {
+      name: "شمارش تعداد کلمات متن",
+      link: "/tools/letter-counter",
+      icon: "o_calculate",
+      address: "letter-counter"
     },
     {
       name: "تولید رمز قوی",

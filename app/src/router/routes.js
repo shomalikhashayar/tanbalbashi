@@ -3,6 +3,7 @@ import ToolsLayout from "src/layouts/ToolsLayout.vue";
 import HomePage from "src/pages/HomePage.vue";
 import FactorialPage from "src/pages/FactorialPage.vue";
 import LoremIpsumPage from "src/pages/LoremIpsumPage.vue";
+import LetterCounterPage from "src/pages/LetterCounterPage.vue";
 import ErrorNotFound from "src/pages/ErrorNotFound.vue";
 
 const routes = [
@@ -21,15 +22,21 @@ const routes = [
     children: [
       {
         path: "factorial",
-        name: "فاکتوریل",
+        name: "محاسبه فاکتوریل",
         meta: { icon: "o_priority_high" },
         component: FactorialPage,
       },
       {
         path: "loremipsum",
-        name: "متن تصادفی",
+        name: "تولید متن تصادفی",
         meta: { icon: "o_format_list_numbered_rtl" },
         component: LoremIpsumPage,
+      },
+      {
+        path: "letter-counter",
+        name: "شمارش تعداد کلمات در متن",
+        meta: { icon: "o_calculate" },
+        component: LetterCounterPage,
       },
     ],
   },

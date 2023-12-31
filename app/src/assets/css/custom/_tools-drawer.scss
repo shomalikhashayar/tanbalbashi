@@ -1,0 +1,27 @@
+.tools-drawer .q-item.q-router-link--active {
+  background-color: #{$primary}20;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: 4px solid $primary;
+  color: $primary;
+  margin-right: 24px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+
+  .q-icon {
+    color: $primary;
+  }
+
+  & .q-focus-helper {
+    display: none !important;
+  }
+
+}
+
+.tools-drawer .q-focus-helper {
+  background-color: $primary;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: $primary;
+  margin-right: 24px;
+}

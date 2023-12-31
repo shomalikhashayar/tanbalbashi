@@ -1,9 +1,9 @@
 <template>
-  <q-drawer v-model="drawer" bordered show-if-above :width="280" :breakpoint="500" unelevated class="menu-bar bg-white">
+  <q-drawer v-model="drawer" bordered show-if-above :width="300" :breakpoint="500" unelevated class="tools-drawer bg-white">
     <q-scroll-area class="fit">
       <q-list class="rounded-borders text-dark">
-        <div class="text-bold text-h6 no-letter-spacing q-py-md q-px-lg">
-          ابزارها
+        <div class="text-weight-900 text-h6 no-letter-spacing q-py-md q-px-lg">
+          <a href="/tools" class="text-dark no-decoration decoration-on-hover">ابزارها</a>
         </div>
         <div v-for="tool in tools" :key="tool.name">
           <q-item clickable v-ripple :to="`/tools/${tool.address}`" class="q-py-md q-pl-lg">

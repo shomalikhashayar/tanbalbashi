@@ -1,37 +1,43 @@
 <template>
-  <q-card bordered class="no-shadow q-my-xl">
-    <q-card-section class="q-pa-xl">
-      <h1 class="text-h6 no-letter-spacing q-mt-none">
-        تولید متن تصادفی
-      </h1>
+  <div class="column">
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl q-mb-lg">
+      تولید متن تصادفی
+    </h1>
+    <q-card bordered class="no-shadow q-mb-xl">
+      <q-card-section class="q-pa-xl">
 
-      <q-select dropdown-icon="keyboard_arrow_down" dense outlined v-model="selectedLanguage" :options="languageOptions"
-        color="primary" class="text-body1" popup-content-class="text-body1" />
-
-      <div class="q-mt-lg">
-        <q-item-label class="text-h6">
-          تعداد پاراگراف: {{ paragraphCount }}
+        <q-item-label class="text-grey-7 q-mb-sm text-body1 no-letter-spacing">
+          زبان
         </q-item-label>
-        <q-slider v-model="paragraphCount" track-size="8px" thumb-color="primary" color="primary" :min="1" :max="20" />
-      </div>
+        <q-select dropdown-icon="keyboard_arrow_down" dense outlined v-model="selectedLanguage" :options="languageOptions"
+          color="primary" class="text-body1" popup-content-class="text-body1" />
 
-      <div class="q-mt-md q-mb-lg">
-        <q-item-label class="q-mb-sm text-grey-7 text-h6 no-letter-spacing">
-          نتیجه:
-        </q-item-label>
-        <q-input outlined readonly v-model="generatedText" type="textarea" class="text-body1" :class="direction"></q-input>
-      </div>
+        <div class="q-mt-lg">
+          <q-item-label class="text-h6">
+            تعداد پاراگراف: {{ paragraphCount }}
+          </q-item-label>
+          <q-slider v-model="paragraphCount" track-size="8px" thumb-color="primary" color="primary" :min="1" :max="20" />
+        </div>
 
-      <div class="row q-gutter-x-sm">
-        <q-btn unelevated class="text-body1" color="primary" @click="generateLoremIpsum">تولید متن تصادفی</q-btn>
-        <q-btn outline class="text-body1" unelevated color="dark" @click="copyToClipboard"
-          :disable="generatedText.length === 0">کپی
-          متن</q-btn>
-      </div>
-    </q-card-section>
+        <div class="q-mt-md q-mb-lg">
+          <q-item-label class="q-mb-sm text-grey-7 text-body1 no-letter-spacing">
+            نتیجه:
+          </q-item-label>
+          <q-input outlined readonly v-model="generatedText" type="textarea" class="text-body1"
+            :class="direction"></q-input>
+        </div>
+
+        <div class="row q-gutter-x-sm">
+          <q-btn unelevated class="text-body1" color="primary" @click="generateLoremIpsum">تولید متن تصادفی</q-btn>
+          <q-btn outline class="text-body1" unelevated color="dark" @click="copyToClipboard"
+            :disable="generatedText.length === 0">کپی
+            متن</q-btn>
+        </div>
+      </q-card-section>
 
 
-  </q-card>
+    </q-card>
+  </div>
 </template>
 
 <script setup>

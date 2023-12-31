@@ -7,7 +7,7 @@
           <q-avatar class="q-mr-sm" size="72px">
             <img :src="`${websiteURL}/sloth.png`" alt="Tanbalbashi logo">
           </q-avatar>
-          <span class="text-weight-900 text-dark">تنبل‌باشی</span>
+          <span class="text-weight-900 text-dark decoration-on-hover">تنبل‌باشی</span>
         </a>
 
         <buy-coffee-btn />

@@ -1,22 +1,32 @@
 <template>
-    <q-card bordered class="no-shadow q-my-xl">
+  <div class="column">
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl q-mb-lg">
+      محاسبه فاکتوریل
+    </h1>
+    <q-card bordered class="no-shadow q-mb-xl">
       <q-card-section class="q-pa-xl">
-        <h1 class="text-h6 no-letter-spacing q-mt-none">
-          محاسبه فاکتوریل
-        </h1>
-        <div class="row">
+
+        <div class="row items-center">
+          <div class="col-7 column">
+            <q-item-label class="text-grey-7 text-body1 no-letter-spacing q-mb-sm">
+              یک عدد صحیح مثبت وارد کنید
+            </q-item-label>
+            <div class="col row justify-start">
           <q-input class="text-body1" dense outlined v-model="inputValue" style="width: 400px;" />
           <q-btn class="text-body1 q-ml-sm" unelevated color="primary" @click="calculateFactorial">محاسبه</q-btn>
         </div>
+          </div>
+        </div>
 
         <div class="row q-my-lg">
-          <q-item-label class="q-mb-sm text-grey-7 text-h6 no-letter-spacing">
+          <q-item-label class="q-mb-sm text-grey-7 text-body1 no-letter-spacing">
             نتیجه:
           </q-item-label>
           <q-input readonly autogrow class="text-body1 full-width" outlined v-model="formattedResult" />
         </div>
       </q-card-section>
     </q-card>
+  </div>
 </template>
 
 <script setup>
