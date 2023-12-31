@@ -4,7 +4,7 @@
 
     <div class="row q-gutter-lg q-mb-xl">
       <div class="card-width" v-for="tool in tools" :key="tool.name">
-        <a :href="tool.address" class="no-decoration text-dark">
+        <a :href="`tools/${tool.address}`" class="no-decoration text-dark">
           <q-card bordered class="no-shadow">
             <q-card-section class="q-py-md row items-center justify-center">
               <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">{{ tool.name }}</h3>
