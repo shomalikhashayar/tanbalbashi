@@ -1,13 +1,13 @@
 <template>
   <div class="container q-mb-xl">
     <q-card rd class="no-shadow custom-bg q-my-lg">
-      <q-card-section horizontal>
-        <q-card-section class="q-pa-xl">
+      <q-card-section :horizontal="$q.screen.gt.sm">
+        <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : '' ">
           <buy-coffee />
         </q-card-section>
 
-        <q-card-section class="q-pa-xl">
-          <p class="no-margin text-body1 text-dark line-height-sm no-letter-spacing">
+        <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : '' ">
+          <p :class="$q.screen.gt.sm ? '' : 'text-justify' " class="no-margin text-body1 text-dark line-height-sm no-letter-spacing">
             تنبل‌باشی، همه ابزارهای آنلاین را گرد هم می آورد. اگر از نشانک گذاری یک وب سایت برای هر ابزار آنلاین خسته شده
             اید، در جای مناسبی هستید.
 
@@ -16,7 +16,7 @@
 
             شروع به استفاده از تنبل‌باشی کنید و همه ابزارهای دیگری را که استفاده می کنید برای همیشه فراموش کنید.
           </p>
-          <div class="row q-mt-xl q-gutter-x-md items-center">
+          <div class="row q-gutter-md items-center" :class="$q.screen.gt.sm ? 'q-mt-lg' : 'q-mt-md' ">
             <div class="text-h6 text-weight-700">
               دوست‌داری حمایتمون بکنی؟
             </div>

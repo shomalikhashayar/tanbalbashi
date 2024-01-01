@@ -1,10 +1,10 @@
 <template>
   <div class="column">
-    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl q-mb-lg">
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md' ">
       تولید متن تصادفی
     </h1>
     <q-card bordered class="no-shadow q-mb-xl">
-      <q-card-section class="q-pa-xl">
+      <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg' ">
 
         <q-item-label class="text-grey-7 q-mb-sm text-body1 no-letter-spacing">
           زبان

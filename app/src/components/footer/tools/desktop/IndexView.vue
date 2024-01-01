@@ -1,5 +1,5 @@
 <template>
-  <q-footer class="layout q-pa-lg">
+  <q-footer class="layout q-py-lg">
     <div class="container">
       <tools-marquee />
       <q-separator size="1px" color="primary" />

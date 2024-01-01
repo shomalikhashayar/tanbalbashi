@@ -1,7 +1,7 @@
 <template>
-  <div class="column q-gutter-y-md justify-center items-center q-pa-xl">
+  <div class="column q-gutter-y-md justify-center items-center" :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-sm' ">
     <div class="text-h6 text-weight-900 text-dark no-letter-spacing">حسش نیست بیخیال</div>
-    <img style="width: 200px;" :src="`${websiteURL}/nothing-found.svg`" alt="Tanbalbashi logo">
+    <img :style="$q.screen.gt.sm ? 'width: 200px;' : 'width: 150px;' " :src="`${websiteURL}/nothing-found.svg`" alt="Tanbalbashi logo">
   </div>
 </template>
 

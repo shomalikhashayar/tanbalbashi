@@ -6,7 +6,7 @@
         <q-icon v-if="searchQuery === ''" name="search" size="md" />
         <q-icon size="md" v-else name="clear" class="cursor-pointer" @click="clearSearch" />
       </template>
-      <template #append>
+      <template v-if="$q.screen.gt.sm" #append>
         <q-chip class="text-caption text-white bg-primary text-bold text-dark no-pointer-events">
           CTRL + K
         </q-chip>
@@ -14,7 +14,7 @@
     </q-input>
     <q-menu :offset="[0, 20]" no-parent-event v-model="isPopupOpen" transition-show="jump-down" transition-hide="jump-up"
       fit no-focus no-refocus>
-      <q-list v-if="isPopupOpen">
+      <q-list padding v-if="isPopupOpen">
         <q-item :to="item.link" v-for="(item, index) in filteredItems" :key="index">
           <q-item-section class="text-body1 no-letter-spacing">{{ item.name }}</q-item-section>
         </q-item>

@@ -1,6 +1,6 @@
 <template>
   <div class="column q-mt-xl">
-    <h1 class="text-h6 text-weight-900 text-dark no-letter-spacing q-mt-none q-mb-lg">شمارش تعداد کلمات در متن</h1>
+    <h1 class="text-h6 text-weight-900 text-dark no-letter-spacing q-mt-none" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md' ">شمارش تعداد کلمات در متن</h1>
     <q-card bordered class="no-shadow">
       <q-input class="text-body1" outlined v-model="textInput" @update:model-value="countText" textarea autogrow
         placeholder="متن رو یا بنویس یا بنداز تو من..." />

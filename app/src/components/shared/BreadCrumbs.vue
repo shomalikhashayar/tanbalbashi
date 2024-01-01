@@ -4,7 +4,7 @@
     <q-breadcrumbs-el to="/">
       <div class="row items-center">
         <q-icon name="o_forest" class="q-mr-sm" size="sm" />
-        <h3 class="no-margin text-h6 decoration-on-hover">تنبل‌باشی</h3>
+        <h3  :class="$q.screen.gt.sm ? 'text-h6' : 'text-body2' " class="no-margin decoration-on-hover">تنبل‌باشی</h3>
       </div>
     </q-breadcrumbs-el>
 
@@ -15,7 +15,7 @@
     <q-breadcrumbs-el v-for="item in validItems" :key="item.path" :to="item.path">
       <div class="row items-center">
         <q-icon :name="item.meta.icon" class="q-mr-sm" size="sm" />
-        <h3 class="no-margin text-h6 decoration-on-hover">{{ item.name }}</h3>
+        <h3 :class="$q.screen.gt.sm ? 'text-h6' : 'text-body2' " class="no-margin decoration-on-hover">{{ item.name }}</h3>
       </div>
     </q-breadcrumbs-el>
 

@@ -5,7 +5,7 @@ function enqueue_quasar_styles()
 {
     wp_register_style(
         "vendor",
-        get_template_directory_uri() . "/app/dist/spa/css/vendor.023c2120.css",
+        get_template_directory_uri() . "/app/dist/pwa/css/vendor.4566e07b.css",
         [],
         false,
         "all"
@@ -15,7 +15,7 @@ function enqueue_quasar_styles()
 
     wp_register_style(
         "app",
-        get_template_directory_uri() . "/app/dist/spa/css/app.01d3d2bb.css",
+        get_template_directory_uri() . "/app/dist/pwa/css/app.c60db357.css",
         [],
         false,
         "all"
@@ -41,7 +41,7 @@ function enqueue_quasar_js()
 {
     wp_enqueue_script(
         'vendor',
-        get_template_directory_uri() . '/app/dist/spa/js/vendor.304c7a24.js',
+        get_template_directory_uri() . '/app/dist/pwa/js/vendor.6b3b0c94.js',
         [],
         null,
         true
@@ -49,7 +49,15 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'app',
-        get_template_directory_uri() . '/app/dist/spa/js/app.e72cf79c.js',
+        get_template_directory_uri() . '/app/dist/pwa/js/app.92904ce8.js',
+        [],
+        null,
+        true
+    );
+
+    wp_enqueue_script(
+        'service-worker',
+        get_template_directory_uri() . '/app/dist/pwa/service-worker.js',
         [],
         null,
         true

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero bg-accent">
+  <div class="hero bg-accent" :class="$q.screen.xs ? 'q-pt-md' : 'q-pt-xl' ">
     <div class="container">
       <div class="row justify-between items-center">
 
@@ -42,6 +42,5 @@ const websiteURL = helper.websiteURL()
 <style lang="scss" scoped>
 .hero {
   height: 350px;
-  padding-top: 42px;
 }
 </style>

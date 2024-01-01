@@ -8,13 +8,13 @@
         <span>
           <div class="row q-gutter-x-lg no-wrap">
             <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
-              :key="tool.name">{{ tool.name }}&nbsp;</a>
+              :key="tool.name">{{ tool.name }}</a>
           </div>
         </span>
         <span>
           <div class="row q-gutter-x-lg no-wrap">
             <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
-              :key="tool.name">{{ tool.name }}&nbsp;</a>
+              :key="tool.name">{{ tool.name }}</a>
           </div>
         </span>
       </div>

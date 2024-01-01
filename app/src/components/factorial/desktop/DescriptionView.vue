@@ -1,8 +1,8 @@
 <template>
   <div class="row">
-    <h2 class="text-h6 text-weight-900 q-mt-none q-mb-lg">برای مطالعه (حال داشتی بخون)</h2>
+    <h2 class="text-h6 text-weight-900 q-mt-none" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md'">برای مطالعه (حال داشتی بخون)</h2>
     <q-card bordered class="no-shadow full-width">
-      <q-card-section class="q-pa-xl">
+      <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
         <div class="column justify-start">
           <p class="text-body1 no-margin no-letter-spacing">
             فاکتوریل یک عدد، حاصل ضرب تمام اعداد صحیح نزولی مثبت از آن عدد تا عدد یک است. فاکتوریل <span
