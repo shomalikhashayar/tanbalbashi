@@ -21,35 +21,54 @@
 </template>
 
 <style scoped lang="scss">
-
 @media (max-width: $breakpoint-xs-max) {
   .coffee-container {
     width: 260px;
     height: 260px;
+    top: calc(50% - 140px);
+    left: calc(58% - 150px);
   }
 
   .coffee-medium__cup {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
 }
 
 @media (min-width: $breakpoint-xs-max) and (max-width: $breakpoint-sm-max) {
   .coffee-container {
-    width: 260px;
-    height: 260px;
-  }
-
-  .coffee-medium__cup {
-    margin-bottom: 24px;
+    width: 300px;
+    height: 280px;
+    top: calc(50% - 140px);
+    left: calc(50% - 150px);
   }
 }
 
 
-@media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-max) {
+@media (min-width: $breakpoint-sm-max) and (max-width: $breakpoint-md-max) {
   .coffee-container {
     width: 300px;
     height: 280px;
+    top: calc(50% - 140px);
+    left: calc(50% - 150px);
+  }
+}
+
+@media (min-width: $breakpoint-md-max) and (max-width: $breakpoint-xl-min) {
+  .coffee-container {
+    width: 300px;
+    height: 280px;
+    top: calc(50% - 140px);
+    left: calc(50% - 150px);
+  }
+}
+
+@media (min-width: $breakpoint-xl-min) and (max-width: 8000px) {
+  .coffee-container {
+    width: 300px;
+    height: 280px;
+    top: calc(50% - 140px);
+    left: calc(50% - 150px);
   }
 }
 
