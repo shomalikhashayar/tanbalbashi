@@ -5,6 +5,7 @@ import FactorialPage from "src/pages/FactorialPage.vue";
 import LoremIpsumPage from "src/pages/LoremIpsumPage.vue";
 import LetterCounterPage from "src/pages/LetterCounterPage.vue";
 import ErrorNotFound from "src/pages/ErrorNotFound.vue";
+import SquareRootPage from "src/pages/SquareRootPage.vue";
 
 const routes = [
   {
@@ -37,6 +38,12 @@ const routes = [
         name: "شمارش تعداد کلمات در متن",
         meta: { icon: "o_calculate" },
         component: LetterCounterPage,
+      },
+      {
+        path: "square-root",
+        name: "محاسبه جذر",
+        meta: { icon: "o_square" },
+        component: SquareRootPage,
       },
     ],
   },

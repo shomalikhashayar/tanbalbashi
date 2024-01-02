@@ -3,7 +3,7 @@
     :breakpoint="500" unelevated class="tools-drawer bg-white">
     <q-scroll-area class="fit">
       <q-list class="rounded-borders text-dark">
-        <div class="row justify-between text-weight-900 text-h6 no-letter-spacing q-py-md q-px-lg" :style="$q.screen.lt.md ? 'margin-top: 90px;' : '' ">
+        <div class="row justify-between text-weight-900 text-h6 no-letter-spacing q-py-md q-px-lg" >
           <a href="/tools" class="text-dark no-decoration decoration-on-hover">ابزارها</a>
         <q-btn v-if="$q.screen.lt.md" dense unelevated round icon="o_close" @click="toolsDrawerStore.state.value = false" />
         </div>

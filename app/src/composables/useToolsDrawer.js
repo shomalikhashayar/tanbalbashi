@@ -1,6 +1,6 @@
 import { ref } from "vue"
 
-const state = ref(true)
+const state = ref(false)
 
 export default function useToolsDrawer() {
   const toggle = () => {

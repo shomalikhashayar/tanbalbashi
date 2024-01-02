@@ -47,9 +47,12 @@
   }
 }
 
-@media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-max) {
+@media (min-width: $breakpoint-md-min)  {
   .container {
-    width: 1100px;
+    width: 100% !important;
+    max-width: 1100px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 

@@ -27,7 +27,7 @@ export const helper = {
       name: "محاسبه جذر",
       link: "/tools/factorial",
       icon: "o_view_in_ar",
-      address: "square"
+      address: "square-root"
     },
     {
       name: "تولید متن تصادفی",

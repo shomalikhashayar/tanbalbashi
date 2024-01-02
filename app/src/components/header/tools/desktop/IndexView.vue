@@ -1,10 +1,10 @@
 <template>
-  <q-header unelevated bordered class="q-px-lg bg-white text-dark q-py-xs z-top">
+  <q-header unelevated bordered class="q-px-lg bg-white text-dark q-py-xs">
     <div class="header-container">
       <q-toolbar class="row justify-between items-center no-padding">
         <div class="flex link-on-hover" :class="$q.screen.gt.sm ? 'col' : 'col-6'">
           <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
-            <q-avatar class="q-mr-sm" size="72px">
+            <q-avatar class="q-mr-sm" size="72px" >
               <img :src="`${websiteURL}/sloth.png`" alt="Tanbalbashi logo">
             </q-avatar>
             <span class="text-weight-900 text-dark">تنبل‌باشی</span>

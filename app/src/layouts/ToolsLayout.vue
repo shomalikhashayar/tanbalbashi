@@ -1,13 +1,11 @@
 <template>
   <q-layout view="hHh Lpr lff" class="layout">
-
     <tools-header />
     <tools-desktop-footer v-if="$q.screen.gt.sm" />
     <tools-mobile-footer v-if="$q.screen.lt.md" />
-    <tools-drawer />
+    <tools-drawer v-if="toolsDrawerStore.state.value" />
 
     <q-page-container>
-
       <div class="container" :class="$q.screen.gt.sm ? 'q-mt-xl' : 'q-mt-lg'">
         <bread-crumbs />
       </div>
@@ -18,10 +16,20 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
+import { ref } from "vue";
 import ToolsDesktopFooter from "src/components/footer/tools/desktop/IndexView.vue";
 import ToolsMobileFooter from "src/components/footer/tools/mobile/IndexView.vue";
-import ToolsHeader from "src/components/header/tools/desktop/IndexView.vue"
-import ToolsDrawer from "src/components/shared/ToolsDrawer.vue"
-import BreadCrumbs from "src/components/shared/BreadCrumbs.vue"
+import ToolsHeader from "src/components/header/tools/desktop/IndexView.vue";
+import ToolsDrawer from "src/components/shared/ToolsDrawer.vue";
+import BreadCrumbs from "src/components/shared/BreadCrumbs.vue";
+
+import { useQuasar } from "quasar";
+import useToolsDrawer from "src/composables/useToolsDrawer";
+
+const $q = useQuasar();
+const toolsDrawerStore = useToolsDrawer();
+
+if ($q.screen.lt.md) {
+  toolsDrawerStore.state.value = false;
+}
 </script>
