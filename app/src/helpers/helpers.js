@@ -19,13 +19,13 @@ export const helper = {
     },
     {
       name: "محاسبه لگاریتم",
-      link: "/tools/factorial",
+      link: "/tools/logarightm",
       icon: "o_functions",
       address: "logarightm"
     },
     {
       name: "محاسبه جذر",
-      link: "/tools/factorial",
+      link: "/tools/square-root",
       icon: "o_square",
       address: "square-root"
     },
@@ -43,13 +43,13 @@ export const helper = {
     },
     {
       name: "تولید رمز قوی",
-      link: "/tools/factorial",
+      link: "/tools/strong-password",
       icon: "o_password",
       address: "strong-password"
     },
     {
       name: "محاسبه درصد",
-      link: "/tools/factorial",
+      link: "/tools/percent",
       icon: "o_percent",
       address: "percent"
     },
