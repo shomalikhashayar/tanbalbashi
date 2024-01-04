@@ -7,6 +7,7 @@ import LetterCounterPage from "src/pages/LetterCounterPage.vue";
 import ErrorNotFound from "src/pages/ErrorNotFound.vue";
 import SquareRootPage from "src/pages/SquareRootPage.vue";
 import LogarightmPage from "src/pages/LogarightmPage.vue";
+import PercentPage from "src/pages/PercentPage.vue";
 
 const routes = [
   {
@@ -51,6 +52,12 @@ const routes = [
         name: "محاسبه لگاریتم",
         meta: { icon: "o_calculate" },
         component: LogarightmPage,
+      },
+      {
+        path: "percent",
+        name: "محاسبه درصد",
+        meta: { icon: "o_percent" },
+        component: PercentPage,
       },
     ],
   },
