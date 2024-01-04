@@ -8,6 +8,7 @@ import ErrorNotFound from "src/pages/ErrorNotFound.vue";
 import SquareRootPage from "src/pages/SquareRootPage.vue";
 import LogarightmPage from "src/pages/LogarightmPage.vue";
 import PercentPage from "src/pages/PercentPage.vue";
+import StrongPasswordPage from "src/pages/StrongPasswordPage.vue";
 
 const routes = [
   {
@@ -32,7 +33,7 @@ const routes = [
       {
         path: "loremipsum",
         name: "تولید متن تصادفی",
-        meta: { icon: "o_format_list_numbered_rtl" },
+        meta: { icon: "abc" },
         component: LoremIpsumPage,
       },
       {
@@ -50,7 +51,7 @@ const routes = [
       {
         path: "logarightm",
         name: "محاسبه لگاریتم",
-        meta: { icon: "o_calculate" },
+        meta: { icon: "o_functions" },
         component: LogarightmPage,
       },
       {
@@ -58,6 +59,12 @@ const routes = [
         name: "محاسبه درصد",
         meta: { icon: "o_percent" },
         component: PercentPage,
+      },
+      {
+        path: "strong-password",
+        name: "تولید رمز قوی",
+        meta: { icon: "o_password" },
+        component: StrongPasswordPage,
       },
     ],
   },

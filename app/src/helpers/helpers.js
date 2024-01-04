@@ -26,19 +26,19 @@ export const helper = {
     {
       name: "محاسبه جذر",
       link: "/tools/factorial",
-      icon: "o_view_in_ar",
+      icon: "o_square",
       address: "square-root"
     },
     {
       name: "تولید متن تصادفی",
       link: "/tools/loremipsum",
-      icon: "o_format_list_numbered_rtl",
+      icon: "abc",
       address: "loremipsum"
     },
     {
       name: "شمارش تعداد کلمات متن",
       link: "/tools/letter-counter",
-      icon: "o_calculate",
+      icon: "o_pin",
       address: "letter-counter"
     },
     {
