@@ -6,6 +6,7 @@ import LoremIpsumPage from "src/pages/LoremIpsumPage.vue";
 import LetterCounterPage from "src/pages/LetterCounterPage.vue";
 import ErrorNotFound from "src/pages/ErrorNotFound.vue";
 import SquareRootPage from "src/pages/SquareRootPage.vue";
+import LogarightmPage from "src/pages/LogarightmPage.vue";
 
 const routes = [
   {
@@ -36,7 +37,7 @@ const routes = [
       {
         path: "letter-counter",
         name: "شمارش تعداد کلمات در متن",
-        meta: { icon: "o_calculate" },
+        meta: { icon: "o_pin" },
         component: LetterCounterPage,
       },
       {
@@ -44,6 +45,12 @@ const routes = [
         name: "محاسبه جذر",
         meta: { icon: "o_square" },
         component: SquareRootPage,
+      },
+      {
+        path: "logarightm",
+        name: "محاسبه لگاریتم",
+        meta: { icon: "o_calculate" },
+        component: LogarightmPage,
       },
     ],
   },
