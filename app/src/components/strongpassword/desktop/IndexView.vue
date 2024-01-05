@@ -1,71 +1,42 @@
 <template>
   <div class="column">
-    <h1
-      class="text-h6 text-weight-900 no-letter-spacing q-mt-xl"
-      :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md'"
-    >
-      تولید رمز تصادفی
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md'">
+      تولید رمز قوی
     </h1>
     <q-card bordered class="no-shadow q-mb-xl">
       <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
         <div class="row items-center">
-          <div class="col column">
-            <q-item-label
-              class="text-grey-7 text-body1 no-letter-spacing q-mb-sm"
-            >
-              تنظیمات رمز:
+          <div class="col">
+            <q-item-label class="text-grey-7 text-body1 no-letter-spacing q-mb-sm">
+              تنظیمات رمز
             </q-item-label>
-            <div class="col row justify-between q-gutter-sm">
-              <q-checkbox v-model="includeNumbers">شامل اعداد</q-checkbox>
-              <q-checkbox v-model="includeLowerCase">شامل حروف کوچک</q-checkbox>
-              <q-checkbox v-model="includeUpperCase">شامل حروف بزرگ</q-checkbox>
-              <q-checkbox v-model="includeSpecialChars"
-                >شامل کاراکترهای خاص</q-checkbox
-              >
+            <div class="col row">
+              <q-checkbox class="text-body1 no-letter-spacing" v-model="includeNumbers">شامل اعداد</q-checkbox>
+              <q-checkbox class="text-body1 no-letter-spacing" v-model="includeLowerCase">شامل حروف کوچک</q-checkbox>
+              <q-checkbox class="text-body1 no-letter-spacing" v-model="includeUpperCase">شامل حروف بزرگ</q-checkbox>
+              <q-checkbox class="text-body1 no-letter-spacing" v-model="includeSpecialChars">شامل کاراکترهای خاص</q-checkbox>
             </div>
           </div>
         </div>
-        <div class="row q-my-lg justify-between">
-          <q-select
-            v-model="passwordLength"
-            :options="lengthOptions"
-            label="طول رمز"
-            outlined
-            style="min-width: 120px"
-          />
-          <div class="row q-gutter-x-sm">
-            <q-btn
-              class="text-body1"
-              :class="$q.screen.gt.sm ? 'q-ml-sm' : ''"
-              unelevated
-              color="primary"
-              @click="generateRandomPassword"
-              >تولید رمز</q-btn
-            >
-            <q-btn
-              outline
-              class="text-body1"
-              unelevated
-              color="dark"
-              @click="copyPasswordToClipboard"
-              :disable="randomPassword.length === 0"
-              >کپی رمز</q-btn
-            >
+          <div class="q-my-lg">
+            <q-item-label class="text-grey-7 text-body1 no-letter-spacing q-mb-sm">
+              طول رمز
+            </q-item-label>
+            <q-select class="text-body1" popup-content-class="text-body1" dense :style="$q.screen.gt.sm ? 'width:300px;' : '100%' " v-model="passwordLength" :options="lengthOptions" outlined />
           </div>
-        </div>
-        <div class="row q-my-lg">
-          <q-item-label
-            class="q-mb-sm text-grey-7 text-body1 no-letter-spacing"
-          >
-            رمز تولید شده:
-          </q-item-label>
-          <q-input
-            readonly
-            autogrow
-            class="text-body1 full-width"
-            outlined
-            v-model="randomPassword"
-          />
+        <div class="column q-gutter-y-lg">
+          <div>
+            <q-item-label class="q-mb-sm text-grey-7 text-body1 no-letter-spacing">
+              رمز تولید شده
+            </q-item-label>
+            <q-input readonly autogrow class="text-body1 full-width" outlined v-model="randomPassword" />
+          </div>
+          <div class="row q-gutter-x-sm">
+            <q-btn class="text-body1 no-letter-spacing" :class="$q.screen.gt.sm ? 'q-ml-sm' : ''" unelevated color="primary"
+              @click="generateRandomPassword">تولید رمز</q-btn>
+            <q-btn outline class="text-body1 no-letter-spacing" unelevated color="dark" @click="copyPasswordToClipboard"
+              :disable="randomPassword.length === 0">کپی رمز</q-btn>
+          </div>
         </div>
       </q-card-section>
     </q-card>
@@ -126,4 +97,5 @@ const copyPasswordToClipboard = () => {
       });
     });
 };
+
 </script>

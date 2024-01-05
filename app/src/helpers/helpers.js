@@ -32,13 +32,13 @@ export const helper = {
     {
       name: "تولید متن تصادفی",
       link: "/tools/loremipsum",
-      icon: "abc",
+      icon: "o_format_list_numbered_rtl",
       address: "loremipsum"
     },
     {
       name: "شمارش تعداد کلمات متن",
       link: "/tools/letter-counter",
-      icon: "o_pin",
+      icon: "o_segment",
       address: "letter-counter"
     },
     {

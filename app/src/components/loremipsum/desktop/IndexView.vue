@@ -1,10 +1,10 @@
 <template>
   <div class="column">
-    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md' ">
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md'">
       تولید متن تصادفی
     </h1>
     <q-card bordered class="no-shadow q-mb-xl">
-      <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg' ">
+      <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
 
         <q-item-label class="text-grey-7 q-mb-sm text-body1 no-letter-spacing">
           زبان
@@ -23,13 +23,13 @@
           <q-item-label class="q-mb-sm text-grey-7 text-body1 no-letter-spacing">
             نتیجه:
           </q-item-label>
-          <q-input outlined readonly v-model="generatedText" type="textarea" class="text-body1"
-            :class="direction"></q-input>
+          <q-input outlined readonly v-model="generatedText" type="textarea" class="long text-body1" :class="direction" />
         </div>
 
         <div class="row q-gutter-x-sm">
-          <q-btn unelevated class="text-body1" color="primary" @click="generateLoremIpsum">تولید متن تصادفی</q-btn>
-          <q-btn outline class="text-body1" unelevated color="dark" @click="copyToClipboard"
+          <q-btn unelevated class="text-body1 no-letter-spacing" color="primary" @click="generateLoremIpsum">تولید متن
+            تصادفی</q-btn>
+          <q-btn outline class="text-body1 no-letter-spacing" unelevated color="dark" @click="copyToClipboard"
             :disable="generatedText.length === 0">کپی
             متن</q-btn>
         </div>

@@ -11,10 +11,10 @@
             <q-item-label class="text-grey-7 text-body1 no-letter-spacing q-mb-sm">
               یک عدد صحیح مثبت وارد کنید
             </q-item-label>
-            <div class="col row justify-start q-gutter-sm">
+            <div class="col row justify-start q-gutter-md">
               <q-input class="text-body1" dense outlined v-model="inputValue"
                 :style="$q.screen.gt.sm ? 'width: 400px;' : 'width: 100%;'" />
-              <q-btn class="text-body1" :class="$q.screen.gt.sm ? 'q-ml-sm' : ''" unelevated color="primary"
+              <q-btn class="text-body1 no-letter-spacing" :class="$q.screen.gt.sm ? 'q-ml-sm' : ''" unelevated color="primary"
                 @click="calculateFactorial">محاسبه</q-btn>
             </div>
           </div>

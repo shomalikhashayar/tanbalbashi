@@ -41,7 +41,7 @@ function enqueue_quasar_js()
 {
     wp_enqueue_script(
         'vendor',
-        get_template_directory_uri() . '/app/dist/pwa/js/vendor.6b3b0c94.js',
+        get_template_directory_uri() . '/app/dist/spa/js/vendor.a9771534.js',
         [],
         null,
         true
@@ -49,15 +49,7 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'app',
-        get_template_directory_uri() . '/app/dist/pwa/js/app.b4efbef8.js',
-        [],
-        null,
-        true
-    );
-
-    wp_enqueue_script(
-        'service-worker',
-        get_template_directory_uri() . '/app/dist/pwa/service-worker.js',
+        get_template_directory_uri() . '/app/dist/spa/js/app.18006dc0.js',
         [],
         null,
         true
