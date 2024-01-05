@@ -53,6 +53,12 @@ export const helper = {
       icon: "o_percent",
       address: "percent"
     },
+    {
+      name: "آی پی من چیه؟",
+      link: "/tools/whats-my-ip",
+      icon: "o_question_mark",
+      address: "whats-my-ip"
+    },
   ],
 
   websiteURL: () => {

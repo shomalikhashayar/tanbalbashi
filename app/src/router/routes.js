@@ -9,6 +9,7 @@ import SquareRootPage from "src/pages/SquareRootPage.vue";
 import LogarightmPage from "src/pages/LogarightmPage.vue";
 import PercentPage from "src/pages/PercentPage.vue";
 import StrongPasswordPage from "src/pages/StrongPasswordPage.vue";
+import WhatsMyIPPage from "src/pages/WhatsMyIPPage.vue";
 
 const routes = [
   {
@@ -65,6 +66,12 @@ const routes = [
         name: "تولید رمز قوی",
         meta: { icon: "o_password" },
         component: StrongPasswordPage,
+      },
+      {
+        path: "whats-my-ip",
+        name: "آی پی من چیه؟",
+        meta: { icon: "o_question_mark" },
+        component: WhatsMyIPPage,
       },
     ],
   },
