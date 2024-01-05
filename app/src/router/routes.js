@@ -33,13 +33,13 @@ const routes = [
       {
         path: "loremipsum",
         name: "تولید متن تصادفی",
-        meta: { icon: "abc" },
+        meta: { icon: "o_format_list_numbered_rtl" },
         component: LoremIpsumPage,
       },
       {
         path: "letter-counter",
         name: "شمارش تعداد کلمات در متن",
-        meta: { icon: "o_pin" },
+        meta: { icon: "o_segment" },
         component: LetterCounterPage,
       },
       {

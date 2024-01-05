@@ -5,7 +5,7 @@ function enqueue_quasar_styles()
 {
     wp_register_style(
         "vendor",
-        get_template_directory_uri() . "/app/dist/pwa/css/vendor.4566e07b.css",
+        get_template_directory_uri() . "/app/dist/spa/css/vendor.4566e07b.css",
         [],
         false,
         "all"
@@ -15,7 +15,7 @@ function enqueue_quasar_styles()
 
     wp_register_style(
         "app",
-        get_template_directory_uri() . "/app/dist/pwa/css/app.7c3058f3.css",
+        get_template_directory_uri() . "/app/dist/spa/css/app.0910f369.css",
         [],
         false,
         "all"
@@ -49,7 +49,7 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'app',
-        get_template_directory_uri() . '/app/dist/spa/js/app.18006dc0.js',
+        get_template_directory_uri() . '/app/dist/spa/js/app.0a1f2c6d.js',
         [],
         null,
         true

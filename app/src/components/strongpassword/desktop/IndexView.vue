@@ -22,7 +22,7 @@
             <q-item-label class="text-grey-7 text-body1 no-letter-spacing q-mb-sm">
               طول رمز
             </q-item-label>
-            <q-select class="text-body1" popup-content-class="text-body1" dense :style="$q.screen.gt.sm ? 'width:300px;' : '100%' " v-model="passwordLength" :options="lengthOptions" outlined />
+            <q-select class="text-body1" dropdown-icon="keyboard_arrow_down" popup-content-class="text-body1" dense :style="$q.screen.gt.sm ? 'width:300px;' : '100%' " v-model="passwordLength" :options="lengthOptions" outlined />
           </div>
         <div class="column q-gutter-y-lg">
           <div>
