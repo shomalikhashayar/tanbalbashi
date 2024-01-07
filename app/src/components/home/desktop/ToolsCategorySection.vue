@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-h4 text-center text-dark q-my-xl text-weight-900">ابزارها</h2>
+    <h2 class="text-h4 text-center text-dark q-my-xl text-weight-900">دسته‌بندی ابزارها</h2>
 
     <div class="row q-gutter-lg q-mb-xl">
       <div class="card-width" v-for="tool in tools" :key="tool.name">

@@ -24,7 +24,7 @@
           </div>
 
           <div v-if="parent.filteredSubItem.length > 0" class="text-dark">
-            <q-item v-for="(subItem, subIndex) in parent.filteredSubItem" :key="'sub_' + subIndex" :to="subItem.address">
+            <q-item v-for="(subItem, subIndex) in parent.filteredSubItem" :key="'sub_' + subIndex" :to="`/tools/${subItem.address}`">
               <q-item-section class="text-body2 no-letter-spacing">{{ subItem.name }}</q-item-section>
             </q-item>
           </div>

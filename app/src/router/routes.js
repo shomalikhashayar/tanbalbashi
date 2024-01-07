@@ -11,7 +11,6 @@ import PercentPage from "src/pages/PercentPage.vue";
 import StrongPasswordPage from "src/pages/StrongPasswordPage.vue";
 import WhatsMyIPPage from "src/pages/WhatsMyIPPage.vue";
 import MultipleSpaceRemover from "src/pages/MultipleSpaceRemoverPage.vue";
-import ToolSection from "src/components/home/desktop/ToolSection.vue";
 
 const routes = [
   {
@@ -23,14 +22,14 @@ const routes = [
   },
   {
     path: "/tools",
+    redirect: "/",
+  },
+  {
+    path: "/tools",
     name: "ابزارها",
     meta: { icon: "o_square_foot" },
     component: ToolsLayout,
     children: [
-      {
-        path: "",
-        component: ToolSection,
-      },
       {
         path: "factorial",
         name: "محاسبه فاکتوریل",
