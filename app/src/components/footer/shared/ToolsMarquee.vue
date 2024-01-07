@@ -5,13 +5,13 @@
     </a>
     <div class="marquee">
       <div class="marquee--inner">
-        <span>
+        <span class="q-pl-md">
           <div class="row q-gutter-x-lg no-wrap">
             <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
               :key="tool.name">{{ tool.name }}</a>
           </div>
         </span>
-        <span>
+        <span class="q-pl-md">
           <div class="row q-gutter-x-lg no-wrap">
             <a class="text-dark text-body1 no-decoration decoration-on-hover no-letter-spacing" :href="tool.link" v-for="tool in tools"
               :key="tool.name">{{ tool.name }}</a>

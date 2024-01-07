@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <q-card bordered class="relative-position no-shadow q-mt-xl">
+    <q-card bordered class="relative-position no-shadow q-mt-xl" style="min-height: 450px;">
       <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
 
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
@@ -29,7 +29,7 @@
                   <q-item-label class="text-body1 text-grey-7 q-mb-sm no-letter-spacing">
                     کشور
                   </q-item-label>
-                  <div class="text-h4 row items-center q-gutter-sm">
+                  <div class="text-h4 row items-center q-gutter-sm text-dark">
                     <q-icon name="o_location_on" size="sm" color="grey-7" />
                     <span>
                       {{ ipInfo.countryName }}
@@ -45,7 +45,7 @@
                   <q-item-label class="text-body1 text-grey-7 q-mb-sm no-letter-spacing">
                     شهر
                   </q-item-label>
-                  <div class="text-h4 row items-center q-gutter-sm">
+                  <div class="text-h4 row items-center q-gutter-sm text-dark">
                     <q-icon name="o_apartment" size="sm" color="grey-7" />
                     <span>
                       {{ ipInfo.cityName }}
@@ -63,7 +63,7 @@
                   <q-item-label class="text-body1 text-grey-7 q-mb-sm no-letter-spacing">
                     منطقه
                   </q-item-label>
-                  <div class="text-h4 row items-center q-gutter-sm">
+                  <div class="text-h4 row items-center q-gutter-sm text-dark">
                     <span class="q-my-none">
                       {{ ipInfo.regionName }}
                     </span>
@@ -81,7 +81,7 @@
                   <q-item-label class="text-body1 text-grey-7 q-mb-sm no-letter-spacing">
                     منطقه زمانی
                   </q-item-label>
-                  <div class="text-h4 row items-center q-gutter-sm">
+                  <div class="text-h4 row items-center q-gutter-sm text-dark">
                     <q-icon name="o_schedule" size="sm" color="grey-7" />
                     <span>
                       {{ ipInfo.timeZone }}
@@ -100,11 +100,14 @@
         <q-spinner size="50px" color="green" />
       </q-inner-loading>
     </q-card>
+
+    <frequently-asked-questions :data="faqData" class="q-mt-xl" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import FrequentlyAskedQuestions from 'src/components/shared/FAQ.vue';
 
 const url = `https://freeipapi.com/api/json`;
 const ipInfo = ref('');
@@ -118,4 +121,28 @@ onMounted(() => {
       dataLoaded.value = true;
     })
 });
+
+const faqData = ref([
+  {
+    title: "آی پی چیست؟",
+    description: `
+    سایت شرکتی، وب‌سایتی است که توسط یک شرکت یا کسب‌وکار ایجاد می‌شود تا اطلاعات مربوط
+    به شرکت، محصولات و خدمات آن، تماس با شرکت، اخبار و مقالات مرتبط، و سایر اطلاعات مهم
+    را به مخاطبان و مشتریان ارائه دهد. این نوع وب‌سایت معمولاً به عنوان یک وسیله ارتباطی
+    اصلی بین شرکت و مشتریانش عمل می‌کند و به شرکت کمک می‌کند تا شناخته‌تر شود و اطلاعات
+    بیشتری را در مورد فعالیت‌ها و محصولات خود به اشتراک بگذارد.
+  `
+  },
+  {
+    title: "آی پی چیست؟",
+    description: `
+    سایت شرکتی، وب‌سایتی است که توسط یک شرکت یا کسب‌وکار ایجاد می‌شود تا اطلاعات مربوط
+    به شرکت، محصولات و خدمات آن، تماس با شرکت، اخبار و مقالات مرتبط، و سایر اطلاعات مهم
+    را به مخاطبان و مشتریان ارائه دهد. این نوع وب‌سایت معمولاً به عنوان یک وسیله ارتباطی
+    اصلی بین شرکت و مشتریانش عمل می‌کند و به شرکت کمک می‌کند تا شناخته‌تر شود و اطلاعات
+    بیشتری را در مورد فعالیت‌ها و محصولات خود به اشتراک بگذارد.
+  `
+  },
+
+])
 </script>
