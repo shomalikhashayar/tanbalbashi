@@ -10,6 +10,7 @@ import LogarightmPage from "src/pages/LogarightmPage.vue";
 import PercentPage from "src/pages/PercentPage.vue";
 import StrongPasswordPage from "src/pages/StrongPasswordPage.vue";
 import WhatsMyIPPage from "src/pages/WhatsMyIPPage.vue";
+import MultipleSpaceRemover from "src/pages/MultipleSpaceRemoverPage.vue";
 
 const routes = [
   {
@@ -72,6 +73,12 @@ const routes = [
         name: "آی پی من چیه؟",
         meta: { icon: "o_question_mark" },
         component: WhatsMyIPPage,
+      },
+      {
+        path: "multiple-space-remover",
+        name: "حذف فواصل اضافه متن",
+        meta: { icon: "o_format_align_left" },
+        component: MultipleSpaceRemover,
       },
     ],
   },

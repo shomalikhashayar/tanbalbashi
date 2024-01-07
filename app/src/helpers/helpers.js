@@ -59,6 +59,12 @@ export const helper = {
       icon: "o_question_mark",
       address: "whats-my-ip"
     },
+    {
+      name: "حذف فواصل اضافه متن",
+      link: "/tools/whats-my-ip",
+      icon: "o_format_align_left",
+      address: "multiple-space-remover"
+    },
   ],
 
   websiteURL: () => {

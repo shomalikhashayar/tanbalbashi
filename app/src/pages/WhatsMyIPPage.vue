@@ -1,11 +1,14 @@
 <template>
     <q-page class="q-pb-lg container">
       <whats-my-ip />
+      <description />
     </q-page>
   </template>
 
   <script setup>
   import WhatsMyIp from "src/components/whatsmyip/desktop/IndexView.vue";
+  import Description from 'src/components/whatsmyip/desktop/DescriptionView.vue';
+
   import { useMeta } from "quasar";
 
   const metaData = {

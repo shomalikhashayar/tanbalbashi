@@ -1,6 +1,9 @@
 <template>
   <div class="column">
-    <q-card bordered class="relative-position no-shadow q-mt-xl" style="min-height: 450px;">
+    <h1 class="text-h6 text-weight-900 no-letter-spacing q-mt-xl" :class="$q.screen.gt.sm ? 'q-mb-lg' : 'q-mb-md'">
+    آی پی من چیه؟
+    </h1>
+    <q-card bordered class="relative-position no-shadow q-mb-xl" style="min-height: 450px;">
       <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
 
         <transition appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
@@ -100,14 +103,11 @@
         <q-spinner size="50px" color="green" />
       </q-inner-loading>
     </q-card>
-
-    <frequently-asked-questions :data="faqData" class="q-mt-xl" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import FrequentlyAskedQuestions from 'src/components/shared/FAQ.vue';
 
 const url = `https://freeipapi.com/api/json`;
 const ipInfo = ref('');
@@ -121,28 +121,4 @@ onMounted(() => {
       dataLoaded.value = true;
     })
 });
-
-const faqData = ref([
-  {
-    title: "آی پی چیست؟",
-    description: `
-    سایت شرکتی، وب‌سایتی است که توسط یک شرکت یا کسب‌وکار ایجاد می‌شود تا اطلاعات مربوط
-    به شرکت، محصولات و خدمات آن، تماس با شرکت، اخبار و مقالات مرتبط، و سایر اطلاعات مهم
-    را به مخاطبان و مشتریان ارائه دهد. این نوع وب‌سایت معمولاً به عنوان یک وسیله ارتباطی
-    اصلی بین شرکت و مشتریانش عمل می‌کند و به شرکت کمک می‌کند تا شناخته‌تر شود و اطلاعات
-    بیشتری را در مورد فعالیت‌ها و محصولات خود به اشتراک بگذارد.
-  `
-  },
-  {
-    title: "آی پی چیست؟",
-    description: `
-    سایت شرکتی، وب‌سایتی است که توسط یک شرکت یا کسب‌وکار ایجاد می‌شود تا اطلاعات مربوط
-    به شرکت، محصولات و خدمات آن، تماس با شرکت، اخبار و مقالات مرتبط، و سایر اطلاعات مهم
-    را به مخاطبان و مشتریان ارائه دهد. این نوع وب‌سایت معمولاً به عنوان یک وسیله ارتباطی
-    اصلی بین شرکت و مشتریانش عمل می‌کند و به شرکت کمک می‌کند تا شناخته‌تر شود و اطلاعات
-    بیشتری را در مورد فعالیت‌ها و محصولات خود به اشتراک بگذارد.
-  `
-  },
-
-])
 </script>
