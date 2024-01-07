@@ -1,11 +1,13 @@
 <template>
   <q-page class="q-pb-lg container">
     <logarightm />
+    <description />
   </q-page>
 </template>
 
 <script setup>
 import logarightm from "src/components/logarightm/desktop/IndexView.vue";
+import Description from 'src/components/logarightm/desktop/DescriptionView.vue';
 import { useMeta } from "quasar";
 
 const metaData = {
