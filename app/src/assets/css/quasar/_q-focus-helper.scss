@@ -1,3 +1,9 @@
 .q-focus-helper {
   background-color: $primary !important;
 }
+
+.no-focus-helper {
+  .q-focus-helper {
+    display: none;
+  }
+}

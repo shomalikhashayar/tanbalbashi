@@ -15,9 +15,21 @@
     <q-menu :offset="[0, 20]" no-parent-event v-model="isPopupOpen" transition-show="jump-down" transition-hide="jump-up"
       fit no-focus no-refocus>
       <q-list padding v-if="isPopupOpen">
-        <q-item :to="item.link" v-for="(item, index) in filteredItems" :key="index">
-          <q-item-section class="text-body1 no-letter-spacing">{{ item.name }}</q-item-section>
-        </q-item>
+        <div v-for="(parent, index) in filteredItems" :key="index">
+
+          <div class="text-dark">
+            <q-item :to="parent.address" class="no-focus-helper">
+              <q-item-section class="text-body2 text-weight-700 no-letter-spacing">{{ parent.name }}</q-item-section>
+            </q-item>
+          </div>
+
+          <div v-if="parent.filteredSubItem.length > 0" class="text-dark">
+            <q-item v-for="(subItem, subIndex) in parent.filteredSubItem" :key="'sub_' + subIndex" :to="subItem.address">
+              <q-item-section class="text-body2 no-letter-spacing">{{ subItem.name }}</q-item-section>
+            </q-item>
+          </div>
+
+        </div>
 
         <q-item v-if="filteredItems.length === 0">
           <q-item-section>
@@ -41,8 +53,16 @@ const searchQuery = ref('');
 const isPopupOpen = ref(false);
 
 const filteredItems = computed(() => {
-  return tools.filter(item =>
-    item.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+  return tools.map(parent => {
+    const filteredSubItem = parent.subItem.filter(sub =>
+      sub.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+    );
+    return {
+      ...parent,
+      filteredSubItem
+    };
+  }).filter(item =>
+    item.name.toLowerCase().includes(searchQuery.value.toLowerCase()) || item.filteredSubItem.length > 0
   );
 });
 
@@ -74,7 +94,6 @@ function setupEventListeners() {
     }
   });
 }
-
 
 onMounted(() => {
   setupEventListeners();
