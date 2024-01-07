@@ -5,7 +5,7 @@
         متداول</h2>
       <div class="column">
         <q-list v-for="(faq, index) in data" :key="index" class="bg-white rounded-borders">
-          <q-expansion-item group="faq">
+          <q-expansion-item :default-opened="shouldOpen(index)" group="faq">
             <template v-slot:header>
               <q-item-section>
                 <h3 class="q-py-sm text-h6 text-weight-700 no-letter-spacing line-height-sm no-margin text-dark">
@@ -28,9 +28,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
 
 const props = defineProps({
   data: Array
 })
+
+const shouldOpen = computed(() => {
+  return (index) => index === 0;
+});
 
 </script>
