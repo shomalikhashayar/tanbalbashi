@@ -2,6 +2,7 @@
   <q-page>
     <hero-section />
     <tools-category-section />
+    <tools-section />
     <donate-section />
   </q-page>
 </template>
@@ -9,6 +10,7 @@
 <script setup>
 import HeroSection from "src/components/home/desktop/HeroSection.vue"
 import ToolsCategorySection from "src/components/home/desktop/ToolsCategorySection.vue"
+import ToolsSection from "src/components/home/desktop/ToolsSection.vue"
 import DonateSection from "src/components/home/desktop/DonateSection.vue"
 
 import { useMeta } from "quasar"

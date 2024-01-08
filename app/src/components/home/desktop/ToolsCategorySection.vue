@@ -7,7 +7,7 @@
         <a :href="`tools/${tool.address}`" class="no-decoration text-dark">
           <q-card bordered class="no-shadow">
             <q-card-section class="q-py-md row items-center justify-center">
-              <h3 class="text-weight-500 text-h6 no-letter-spacing decoration-on-hover">{{ tool.name }}</h3>
+              <h3 class="text-weight-700 text-dark text-h6 no-letter-spacing decoration-on-hover">{{ tool.name }}</h3>
             </q-card-section>
           </q-card>
         </a>

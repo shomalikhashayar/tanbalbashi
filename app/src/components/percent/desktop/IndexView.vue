@@ -53,8 +53,7 @@ const calculatePercentage = () => {
     !isNaN(number) &&
     !isNaN(percentage) &&
     number >= 0 &&
-    percentage >= 0 &&
-    percentage <= 100
+    percentage >= 0
   ) {
     const percentageResult = (number * percentage) / 100;
     result.value = formatResult(percentageResult);
