@@ -1,6 +1,7 @@
 import MainLayout from "src/layouts/MainLayout.vue";
 import ToolsLayout from "src/layouts/ToolsLayout.vue";
 import HomePage from "src/pages/HomePage.vue";
+import TextToolsPage from "src/pages/TextToolsPage.vue";
 import FactorialPage from "src/pages/FactorialPage.vue";
 import LoremIpsumPage from "src/pages/LoremIpsumPage.vue";
 import LetterCounterPage from "src/pages/LetterCounterPage.vue";
@@ -18,7 +19,10 @@ const routes = [
     name: "خانه",
     meta: { icon: "o_chair" },
     component: MainLayout,
-    children: [{ path: "", component: HomePage }],
+    children: [
+      { path: "", component: HomePage },
+      { path: "/text-tools", component: TextToolsPage },
+    ],
   },
   {
     path: "/tools",

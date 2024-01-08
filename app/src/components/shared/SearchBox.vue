@@ -19,13 +19,19 @@
 
           <div class="text-dark">
             <q-item :to="parent.address" class="no-focus-helper">
-              <q-item-section class="text-body2 text-weight-700 no-letter-spacing">{{ parent.name }}</q-item-section>
+              <q-item-section class="text-h6 text-weight-700 no-letter-spacing"># {{ parent.name }}</q-item-section>
             </q-item>
           </div>
 
           <div v-if="parent.filteredSubItem.length > 0" class="text-dark">
-            <q-item v-for="(subItem, subIndex) in parent.filteredSubItem" :key="'sub_' + subIndex" :to="`/tools/${subItem.address}`">
-              <q-item-section class="text-body2 no-letter-spacing">{{ subItem.name }}</q-item-section>
+            <q-item v-for="(subItem, subIndex) in parent.filteredSubItem" :key="'sub_' + subIndex"
+              :to="`/tools/${subItem.address}`">
+              <q-item-section class="text-body1 no-letter-spacing q-py-sm">
+                <div class="row items-center">
+                  <q-icon :name="subItem.icon" size="sm" color="green" class="q-mr-sm" />
+                  {{ subItem.name }}
+                </div>
+              </q-item-section>
             </q-item>
           </div>
 
