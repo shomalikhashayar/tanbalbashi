@@ -4,12 +4,22 @@
     <div v-for="tool in tools" :key="tool.name">
 
       <div class="row justify-between items-center q-mb-lg">
-        <a :href="tool.address" class="text-dark no-decoration decoration-on-hover">
-        <h2 :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'" class="no-margin text-center text-dark text-weight-900"># {{ tool.name }}</h2>
+        <a :href="tool.address" class="text-dark no-decoration">
+          <div class="row items-center">
+            <span :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'" class="text-weight-700 q-mr-sm">#</span>
+            <h2 :id="tool.name.replace(/ /g, '-')" style="scroll-margin-top: 35px;" :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'"
+              class="decoration-on-hover no-margin text-center text-dark text-weight-900">
+              {{ tool.name }}</h2>
+          </div>
         </a>
         <q-btn :to="`/tools/${tool.address}`" padding="6px 12px" dense unelevated flat color="dark"
           class="no-letter-spacing text-body1">
-          مشاهده همه
+          <span v-if="$q.screen.gt.sm">
+            مشاهده همه
+          </span>
+          <span v-if="$q.screen.xs">
+            همه
+          </span>
           <q-icon name="o_chevron_left" />
         </q-btn>
       </div>

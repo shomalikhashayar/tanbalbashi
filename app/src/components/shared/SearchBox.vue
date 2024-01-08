@@ -14,12 +14,18 @@
     </q-input>
     <q-menu :offset="[0, 20]" no-parent-event v-model="isPopupOpen" transition-show="jump-down" transition-hide="jump-up"
       fit no-focus no-refocus>
-      <q-list padding v-if="isPopupOpen">
+      <q-list padding v-if="isPopupOpen" class="column q-gutter-lg">
         <div v-for="(parent, index) in filteredItems" :key="index">
 
-          <div class="text-dark">
+          <div class="text-dark q-mt-sm">
             <q-item :to="parent.address" class="no-focus-helper">
-              <q-item-section class="text-h6 text-weight-700 no-letter-spacing"># {{ parent.name }}</q-item-section>
+              <q-item-section class="text-h6 text-weight-700 no-letter-spacing">
+                <div class="row items-center">
+                  <span class="text-weight-700 q-mr-sm">#</span>
+                  <h2 class="text-h6 decoration-on-hover no-margin text-center text-dark text-weight-900">
+                    {{ parent.name }}</h2>
+                </div>
+              </q-item-section>
             </q-item>
           </div>
 

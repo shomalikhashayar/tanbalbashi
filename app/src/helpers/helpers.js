@@ -10,62 +10,18 @@ export const helper = {
     return date.toLocaleDateString("fa-IR", option);
   },
 
-  // getTools: () => [
-  //   {
-  //     name: "محاسبه فاکتوریل",
-  //     link: "/tools/factorial",
-  //     icon: "o_priority_high",
-  //     address: "factorial"
-  //   },
-  //   {
-  //     name: "محاسبه لگاریتم",
-  //     link: "/tools/logarightm",
-  //     icon: "o_functions",
-  //     address: "logarightm"
-  //   },
-  //   {
-  //     name: "محاسبه جذر",
-  //     link: "/tools/square-root",
-  //     icon: "o_square",
-  //     address: "square-root"
-  //   },
-  //   {
-  //     name: "تولید متن تصادفی",
-  //     link: "/tools/loremipsum",
-  //     icon: "o_format_list_numbered_rtl",
-  //     address: "loremipsum"
-  //   },
-  //   {
-  //     name: "شمارش تعداد کلمات متن",
-  //     link: "/tools/letter-counter",
-  //     icon: "o_segment",
-  //     address: "letter-counter"
-  //   },
-  //   {
-  //     name: "تولید رمز قوی",
-  //     link: "/tools/strong-password",
-  //     icon: "o_password",
-  //     address: "strong-password"
-  //   },
-  //   {
-  //     name: "محاسبه درصد",
-  //     link: "/tools/percent",
-  //     icon: "o_percent",
-  //     address: "percent"
-  //   },
-  //   {
-  //     name: "آی پی من چیه؟",
-  //     link: "/tools/whats-my-ip",
-  //     icon: "o_question_mark",
-  //     address: "whats-my-ip"
-  //   },
-  //   {
-  //     name: "حذف فواصل اضافه متن",
-  //     link: "/tools/whats-my-ip",
-  //     icon: "o_format_align_left",
-  //     address: "multiple-space-remover"
-  //   },
-  // ],
+  thumbStyle: {
+    left: '4px',
+    borderRadius: '5px',
+    width: '6px',
+    opacity: 0.75
+  },
+
+  barStyle: {
+    left: '2px',
+    width: '8px',
+    opacity: 0.2
+  },
 
   getTools: () => [
     {

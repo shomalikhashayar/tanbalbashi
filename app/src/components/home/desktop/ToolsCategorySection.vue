@@ -3,8 +3,8 @@
     <h2 class="text-h4 text-center text-dark q-my-xl text-weight-900">دسته‌بندی ابزارها</h2>
 
     <div class="row q-gutter-lg q-mb-xl">
-      <div class="card-width" v-for="tool in tools" :key="tool.name">
-        <a :href="`/${tool.address}`" class="no-decoration text-dark">
+      <div v-for="tool in tools" :key="tool.name" class="card-width">
+        <a :href="`#${tool.name.replace(/ /g, '-')}`" class="no-decoration text-dark">
           <q-card bordered class="no-shadow">
             <q-card-section class="q-py-md row items-center justify-center">
               <h3 class="text-weight-700 text-dark text-h6 no-letter-spacing decoration-on-hover">{{ tool.name }}</h3>
@@ -13,7 +13,6 @@
         </a>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -22,6 +21,7 @@ import { ref } from 'vue'
 import { helper } from 'src/helpers/helpers';
 
 const tools = helper.getTools()
+
 
 </script>
 
