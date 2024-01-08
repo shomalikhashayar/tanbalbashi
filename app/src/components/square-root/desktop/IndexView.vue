@@ -73,7 +73,6 @@ const formatResult = (value) => {
   const integerPart = Math.floor(value);
   const decimalPart = value - integerPart;
 
-
   if (decimalPart !== 0 && decimalPart.toString().split(".")[1].length !== 0) {
     return value.toFixed(10);
   } else {

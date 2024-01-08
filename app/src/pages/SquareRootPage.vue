@@ -1,11 +1,14 @@
 <template>
   <q-page class="q-pb-lg container">
     <square-root />
+    <description />
   </q-page>
 </template>
 
 <script setup>
 import SquareRoot from "src/components/square-root/desktop/IndexView.vue";
+import Description from 'src/components/square-root/desktop/DescriptionView.vue';
+
 import { useMeta } from "quasar"
 
 const metaData = {
