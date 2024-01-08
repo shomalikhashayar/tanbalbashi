@@ -3,8 +3,10 @@
 
     <div v-for="tool in tools" :key="tool.name">
 
-      <div class="row justify-between items-center">
-        <h2 class="text-h4 text-center text-dark q-my-xl text-weight-900">{{ tool.name }}</h2>
+      <div class="row justify-between items-center q-mb-lg">
+        <a :href="tool.address" class="text-dark no-decoration decoration-on-hover">
+        <h2 :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'" class="no-margin text-center text-dark text-weight-900"># {{ tool.name }}</h2>
+        </a>
         <q-btn :to="`/tools/${tool.address}`" padding="6px 12px" dense unelevated flat color="dark"
           class="no-letter-spacing text-body1">
           مشاهده همه
@@ -12,7 +14,7 @@
         </q-btn>
       </div>
 
-      <div class="row q-gutter-lg q-mb-xl">
+      <div class="row q-gutter-lg" :style="$q.screen.gt.sm ? 'margin-bottom:72px' : 'margin-bottom:48px'">
         <div class="card-width" v-for="subItem in tool.subItem" :key="subItem.name">
           <a :href="`tools/${subItem.address}`" class="no-decoration text-dark">
             <q-card bordered class="no-shadow">

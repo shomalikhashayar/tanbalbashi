@@ -71,7 +71,7 @@ export const helper = {
     {
       name: "ابزارهای محاسباتی",
       icon: "o_calculate",
-      address: "computational",
+      address: "computational-tools",
       subItem: [
         {
           name: "محاسبه فاکتوریل",
@@ -102,7 +102,7 @@ export const helper = {
     {
       name: "ابزارهای متنی",
       icon: "o_description",
-      address: "text",
+      address: "text-tools",
       subItem: [
         {
           name: "تولید متن تصادفی",
@@ -127,7 +127,7 @@ export const helper = {
     {
       name: "ابزارهای شبکه ای",
       icon: "o_public",
-      address: "network",
+      address: "network-tools",
       subItem: [
         {
           name: "آی پی من چیه؟",
@@ -140,7 +140,7 @@ export const helper = {
     {
       name: "ابزارهای امنیتی",
       icon: "o_lock",
-      address: "security",
+      address: "security-tools",
       subItem: [
         {
           name: "تولید رمز قوی",
