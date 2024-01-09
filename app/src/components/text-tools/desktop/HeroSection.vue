@@ -1,5 +1,5 @@
 <template>
-  <div class="hero bg-accent" :class="$q.screen.xs ? 'q-pt-md' : 'q-pt-xl' ">
+  <div class="hero bg-accent" :class="$q.screen.xs ? 'q-pt-md' : 'q-pt-xl'">
     <div class="container">
       <div class="row justify-between items-center">
 
@@ -14,17 +14,22 @@
 
       </div>
 
-      <div class="column q-gutter-y-sm q-mt-lg">
+      <div class="row q-gutter-xl q-mt-lg">
 
-        <h1 class="text-weight-900 text-dark text-h4 no-margin">اینجا کلی ابزار هست که میتونه کار تورو راحت بکنه!</h1>
-        <p class="text-body1 text-dark no-letter-spacing">بیش از 10,000 نفر به <span class="text-weight-900 text-dark">
-            تنبل‌باشی </span> اعتماد کرده‌اند.</p>
+        <div class="col">
 
+          <h1 class="text-h3 no-margin text-weight-900 text-dark line-height-lg">ابزارهای متنی به صورت آنلاین و کاملا
+            رایگان</h1>
+
+          <p class="text-dark text-body no-letter-spacing">به دنبال ابزارهای متن آنلاین می‌گردی؟ <span class="text-weight-900">تنبل‌باشی</span> راست کار خودته!</p>
+
+        </div>
+
+        <div class="col row items-center justify-end">
+          <img style="width: 90%;" :src="`${websiteURL}/text-tools.svg`" alt="">
+        </div>
       </div>
 
-      <div class="q-mt-lg">
-        <search-box />
-      </div>
     </div>
   </div>
 </template>
@@ -41,6 +46,6 @@ const websiteURL = helper.websiteURL()
 
 <style lang="scss" scoped>
 .hero {
-  height: 350px;
+  height: 700px;
 }
 </style>

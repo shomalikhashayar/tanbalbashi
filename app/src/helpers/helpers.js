@@ -111,6 +111,6 @@ export const helper = {
 
   websiteURL: () => {
     return "https://tanbalbashi.ir/wp-content/themes/tanbalbashi/app/public";
-    return "http://localhost/webida/wp-content/themes/blackbox/app/public";
+    return "http://localhost/webida/wp-content/themes/tanbalbashi/app/public";
   },
 };
