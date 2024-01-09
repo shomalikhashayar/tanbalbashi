@@ -11,7 +11,8 @@ import LogarightmPage from "src/pages/LogarightmPage.vue";
 import PercentPage from "src/pages/PercentPage.vue";
 import StrongPasswordPage from "src/pages/StrongPasswordPage.vue";
 import WhatsMyIPPage from "src/pages/WhatsMyIPPage.vue";
-import MultipleSpaceRemover from "src/pages/MultipleSpaceRemoverPage.vue";
+import MultipleSpaceRemoverPage from "src/pages/MultipleSpaceRemoverPage.vue";
+import ColorPaletteGeneratorPage from "src/pages/ColorPaletteGeneratorPage.vue";
 
 const routes = [
   {
@@ -86,7 +87,13 @@ const routes = [
         path: "multiple-space-remover",
         name: "حذف فواصل اضافه متن",
         meta: { icon: "o_format_align_left" },
-        component: MultipleSpaceRemover,
+        component: MultipleSpaceRemoverPage,
+      },
+      {
+        path: "color-palette-generator",
+        name: "ایجاد پالت رنگی",
+        meta: { icon: "o_palette" },
+        component: ColorPaletteGeneratorPage,
       },
     ],
   },
