@@ -1,5 +1,5 @@
 <template>
-  <div class="row items-center" :class="$q.screen.lt.md ? 'justify-center' : 'justify-between' ">
+  <div class="q-gutter-sm items-center" :class="$q.screen.lt.md ? 'column justify-center' : 'row justify-between' ">
     <div class="row items-center" :class="$q.screen.lt.md ? 'justify-center' : '' ">
       <a class="text-body1 no-letter-spacing text-secondary no-decoration text-weight-900" href="/">
         <q-avatar class="q-mr-sm" size="56px">

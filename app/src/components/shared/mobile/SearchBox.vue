@@ -12,8 +12,8 @@
         <q-card-section>
 
           <q-input ref="searchInput" v-model="searchQuery" @keyup.enter.prevent="showMenuOnEnter"
-            placeholder="جستجو برای ابزارها" rounded outlined bg-color="white" color="secondary"
-            class="full-width text-h6">
+            placeholder="جستجو برای ابزارها" rounded outlined bg-color="white" color="secondary" class="full-width"
+            :class="$q.screen.gt.sm ? 'text-h6' : 'text-body1'">
             <template v-slot:prepend>
               <q-icon v-if="searchQuery === ''" name="search" size="md" />
               <q-icon size="md" v-else name="clear" class="cursor-pointer" @click="clearSearch" />
@@ -25,7 +25,7 @@
             </template>
           </q-input>
 
-          <q-scroll-area class="no-scroll q-mt-lg" style="height: calc(100vh - 120px);" :bar-style="{ opacity: 0 }"
+          <q-scroll-area class="no-scroll q-mt-lg" style="height: calc(100vh - 180px);" :bar-style="{ opacity: 0 }"
             :thumb-style="{ opacity: 0 }">
 
             <q-list padding v-if="isPopupOpen" class="column q-gutter-lg">

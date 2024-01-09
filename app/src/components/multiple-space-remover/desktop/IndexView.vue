@@ -5,9 +5,10 @@
     </h1>
     <q-card bordered class="no-shadow q-mb-xl">
       <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
-        <div class="column q-gutter-md">
-          <q-input class="long" outlined v-model="inputText" type="textarea" autogrow />
-          <div class="row q-gutter-sm">
+        <div class="column">
+          <q-input class="long" outlined v-model="inputText" type="textarea" autogrow
+            placeholder="متن رو یا بنویس یا کپی کن تو من..." />
+          <div class="row q-gutter-sm q-mt-md ">
             <q-btn class="text-body1" unelevated color="primary" @click="removeWhitespace">
               حذف فاصله اضافه
             </q-btn>

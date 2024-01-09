@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <hero-section />
-    <tools-section class="q-py-lg" />
+    <tools-section class="q-pb-lg" />
     <light-donate-section />
     <description-section />
   </q-page>

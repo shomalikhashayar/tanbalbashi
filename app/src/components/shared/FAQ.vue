@@ -1,12 +1,12 @@
 <template>
   <q-card bordered class="no-shadow">
-    <q-card-section class="q-pa-xl">
+    <q-card-section :class="$q.screen.gt.sm ? 'q-pa-xl' : 'q-pa-lg'">
       <h2 class="text-dark text-weight-900 text-h3 no-letter-spacing no-line-height q-pb-md">سوالات
         متداول</h2>
       <div class="column">
         <q-list v-for="(faq, index) in data" :key="index" class="bg-white rounded-borders">
-          <q-expansion-item :default-opened="shouldOpen(index)" group="faq">
-            <template v-slot:header>
+          <q-expansion-item :default-opened="shouldOpen(index)" group="faq" class="faq">
+            <template #header>
               <q-item-section>
                 <h3 class="q-py-sm text-h6 text-weight-700 no-letter-spacing line-height-sm no-margin text-dark">
                   {{ faq.title }}
@@ -14,7 +14,7 @@
               </q-item-section>
             </template>
             <q-card>
-              <q-card-section class="text-dark text-body1 no-letter-spacing line-height-sm">
+              <q-card-section class="no-padding text-dark text-body1 no-letter-spacing line-height-sm">
                 <p>
                   {{ faq.description }}
                 </p>
@@ -39,3 +39,9 @@ const shouldOpen = computed(() => {
 });
 
 </script>
+
+<style lang="scss" >
+.faq .q-item {
+  padding: 0 !important;
+}
+</style>
