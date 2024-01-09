@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row items-center justify-center q-my-xl">
-      <h2 :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'" class="no-margin text-center text-dark text-weight-900">مجموعه ابزارهای محاسباتی</h2>
+      <h2 :id="textTools.replace(/ /g, '-')" style="scroll-margin-top: 35px;" :class="$q.screen.gt.sm ? 'text-h4' : 'text-h5'" class="no-margin text-center text-dark text-weight-900">مجموعه ابزارهای متنی</h2>
     </div>
     <div class="row q-gutter-lg" :style="$q.screen.gt.sm ? 'margin-bottom:72px' : 'margin-bottom:48px'">
       <div class="card-width" v-for="subItem in tools" :key="subItem.name">
@@ -25,8 +25,10 @@
 import { ref } from 'vue'
 import { helper } from 'src/helpers/helpers';
 
-const computationalTools = helper.getTools().find(tool => tool.address === 'computational-tools');
+const computationalTools = helper.getTools().find(tool => tool.address === 'text-tools');
 const tools = computationalTools ? computationalTools.subItem : [];
+
+const textTools = 'ابزارهای متنی'
 
 </script>
 

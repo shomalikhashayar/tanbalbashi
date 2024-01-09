@@ -15,7 +15,7 @@ function enqueue_quasar_styles()
 
     wp_register_style(
         "app",
-        get_template_directory_uri() . "/app/dist/spa/css/app.fd0362bb.css",
+        get_template_directory_uri() . "/app/dist/spa/css/app.63b5f408.css",
         [],
         false,
         "all"
@@ -49,7 +49,7 @@ function enqueue_quasar_js()
 
     wp_enqueue_script(
         'app',
-        get_template_directory_uri() . '/app/dist/spa/js/app.5e3b0ab1.js',
+        get_template_directory_uri() . '/app/dist/spa/js/app.f682ed5b.js',
         [],
         null,
         true
